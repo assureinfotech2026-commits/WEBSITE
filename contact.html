@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact Us & Careers - AssureInfo Technologies Private Limited</title>
+
+    <meta name="description" content="Contact AssureInfo Technologies for inquiries or explore career opportunities. Apply online with your resume.">
+
+    <link rel="icon" href="logo.png" type="image/png">
+    <link rel="stylesheet" href="css/nav.css">
+    <script src="layout.js" defer></script>
+
+    <style>
+    /* RESET */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        background: #071a3d;
+        overflow-x: hidden;
+    }
+
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* SECTIONS */
+    .mission-vision-section {
+        width: 100%;
+        padding: clamp(65px, 9vw, 120px) 5%;
+        background: #071a3d;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .alt-bg {
+        background: #0a214b;
+    }
+
+    .mv-container {
+        width: 100%;
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+
+    .mv-heading {
+        max-width: 800px;
+        margin-bottom: 55px;
+    }
+
+    .mv-label {
+        display: inline-block;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 2px;
+        color: #f0b52d;
+        margin-bottom: 18px;
+    }
+
+    .mv-heading h2 {
+        font-size: clamp(30px, 4vw, 55px);
+        line-height: 1.2;
+        font-weight: 700;
+        color: #f3f6ff;
+        margin-bottom: 22px;
+    }
+
+    .mv-heading p {
+        font-size: clamp(16px, 1.4vw, 20px);
+        line-height: 1.5;
+        color: #d7e2f7;
+        max-width: 800px;
+    }
+
+    /* CONTACT CONTENT */
+    .content-block {
+        font-size: clamp(15px, 1.3vw, 17px);
+        line-height: 1.9;
+        color: #d7e2f7;
+        max-width: 800px;
+        margin-bottom: 20px;
+    }
+
+    .email-display {
+        display: inline-flex;
+        align-items: center;
+        gap: 15px;
+        background: linear-gradient(145deg, #102d61, #0a214b);
+        padding: 20px 30px;
+        border: 1px solid rgba(240, 181, 45, 0.55);
+        border-radius: 8px;
+        margin-top: 20px;
+        font-size: 18px;
+        font-weight: 700;
+        color: #f0b52d;
+        transition: transform 0.3s ease;
+    }
+
+    .email-display:hover {
+        transform: translateY(-3px);
+        color: #f0b52d;
+    }
+
+    .email-display svg {
+        width: 24px;
+        height: 24px;
+    }
+
+    /* APPLICATION FORM */
+    .form-card {
+        max-width: 800px;
+        margin: 0 auto;
+        background: linear-gradient(145deg, #102d61, #0a214b);
+        padding: clamp(30px, 4vw, 50px);
+        border: 1px solid rgba(240, 181, 45, 0.55);
+        border-radius: 12px;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+    }
+
+    .form-group {
+        margin-bottom: 24px;
+        position: relative;
+    }
+
+    .form-group label {
+        display: block;
+        font-size: 14px;
+        font-weight: 600;
+        color: #f3f6ff;
+        margin-bottom: 8px;
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="email"],
+    .form-group input[type="tel"] {
+        width: 100%;
+        padding: 14px 16px;
+        background: #071a3d;
+        border: 1px solid rgba(240, 181, 45, 0.3);
+        border-radius: 6px;
+        color: #f3f6ff;
+        font-family: Arial, sans-serif;
+        font-size: 15px;
+        transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .form-group input:focus {
+        outline: none;
+        border-color: #f0b52d;
+        box-shadow: 0 0 0 3px rgba(240, 181, 45, 0.2);
+    }
+
+    .form-group input::placeholder {
+        color: #5a6a8a;
+    }
+
+    /* INPUT VALIDATION */
+    .form-group.has-error input {
+        border-color: #ff7a7a;
+    }
+
+    .form-group.has-success input {
+        border-color: #28c76f;
+    }
+
+    .error-text {
+        color: #ff7a7a;
+        font-size: 12px;
+        margin-top: 6px;
+        display: none;
+    }
+
+    .form-group.has-error .error-text {
+        display: block;
+    }
+
+    /* FILE UPLOAD */
+    .file-upload-wrapper {
+        position: relative;
+        width: 100%;
+    }
+
+    .file-upload-input {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        cursor: pointer;
+        z-index: 2;
+    }
+
+    .file-upload-label {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 14px 16px;
+        background: #071a3d;
+        border: 1px dashed rgba(240, 181, 45, 0.5);
+        border-radius: 6px;
+        color: #8a9abf;
+        font-size: 14px;
+        cursor: pointer;
+        transition: border-color 0.3s ease;
+        gap: 12px;
+    }
+
+    .file-upload-label svg {
+        width: 22px;
+        height: 22px;
+        color: #f0b52d;
+        flex-shrink: 0;
+        margin-left: 10px;
+    }
+
+    .file-upload-label.has-file {
+        border-style: solid;
+        border-color: #28c76f;
+        color: #f3f6ff;
+    }
+
+    /* GREEN SUCCESS TICK */
+    .upload-success-tick {
+        display: none;
+        width: 24px;
+        height: 24px;
+        min-width: 24px;
+        background: #28c76f;
+        color: #ffffff;
+        border-radius: 50%;
+        align-items: center;
+        justify-content: center;
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    .file-upload-label.has-file .upload-success-tick {
+        display: inline-flex;
+    }
+
+    .file-upload-label.has-file .upload-icon {
+        display: none;
+    }
+
+    /* BUTTON */
+    .form-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding: 16px 28px;
+        background: #d99a12;
+        color: #071a3d;
+        font-size: 15px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        margin-top: 10px;
+    }
+
+    .form-btn:hover {
+        background: #f0b52d;
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(217, 154, 18, 0.3);
+    }
+
+    .form-btn:disabled {
+        background: #4a4a4a;
+        color: #888;
+        cursor: not-allowed;
+        transform: none;
+        box-shadow: none;
+    }
+
+    /* MESSAGES */
+    .form-message {
+        margin-top: 20px;
+        padding: 15px;
+        border-radius: 6px;
+        font-size: 14px;
+        text-align: center;
+        display: none;
+    }
+
+    .form-message.success {
+        background: rgba(30, 150, 82, 0.15);
+        border: 1px solid #1e9652;
+        color: #aaf0c5;
+        display: block;
+    }
+
+    .form-message.error {
+        background: rgba(255, 107, 107, 0.15);
+        border: 1px solid #ff6b6b;
+        color: #ffcccc;
+        display: block;
+    }
+
+    /* MEDIA QUERIES */
+    @media (max-width: 1024px) {
+        .mission-vision-section {
+            padding: 75px 4%;
+        }
+
+        .mv-heading {
+            margin-bottom: 40px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .mission-vision-section {
+            padding: 60px 20px;
+        }
+
+        .mv-heading {
+            text-align: center;
+            margin: 0 auto 40px;
+        }
+
+        .mv-heading p {
+            margin: auto;
+        }
+
+        .email-display {
+            flex-direction: column;
+            text-align: center;
+            padding: 25px;
+        }
+
+        .form-card {
+            padding: 25px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .mission-vision-section {
+            padding: 50px 16px;
+        }
+
+        .mv-heading h2 {
+            font-size: 28px;
+        }
+
+        .form-card {
+            padding: 20px 15px;
+        }
+
+        .form-btn {
+            padding: 14px 20px;
+            font-size: 14px;
+        }
+    }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <site-navbar></site-navbar>
+
+    <!-- CONTACT US SECTION -->
+    <section class="mission-vision-section">
+        <div class="mv-container">
+
+            <div class="mv-heading">
+                <span class="mv-label">GET IN TOUCH</span>
+                <h2>Contact Us</h2>
+            </div>
+
+            <p class="content-block">
+                For any inquiries, support, or questions, please reach out to our official contact email address below:
+            </p>
+
+            <a href="mailto:support@assureinfo.in" class="email-display">
+
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+
+                support@assureinfo.in
+
+            </a>
+
+        </div>
+    </section>
+
+    <!-- CAREERS SECTION -->
+    <section class="mission-vision-section alt-bg">
+        <div class="mv-container">
+
+            <div class="mv-heading">
+                <span class="mv-label">JOIN OUR TEAM</span>
+                <h2>Careers</h2>
+                <p>Build Your Future with AssureInfo Technologies</p>
+            </div>
+
+            <p class="content-block">
+                At AssureInfo Technologies, our people are our greatest strength. We provide a positive workplace that encourages learning, teamwork, innovation, and career growth.
+            </p>
+
+            <p class="content-block">
+                We value honesty, responsibility, collaboration, and quality. We encourage our employees to share ideas, take ownership of their work, and contribute to the success of our clients and organization.
+            </p>
+
+            <p class="content-block">
+                Our success is driven by talented professionals. If you are looking for a career that offers challenging projects, global exposure, and professional growth, AssureInfo Technologies is the place for you.
+            </p>
+
+        </div>
+    </section>
+
+    <!-- APPLICATION FORM SECTION -->
+    <section class="mission-vision-section">
+        <div class="mv-container">
+
+            <div class="mv-heading" style="text-align: center; max-width: 600px; margin: 0 auto 40px;">
+                <span class="mv-label">SUBMIT YOUR APPLICATION</span>
+                <h2>Apply Now</h2>
+
+                <p style="font-size: 15px; margin-top: 15px;">
+                    Fill out the form below to submit your application and resume.
+                </p>
+            </div>
+
+            <div class="form-card">
+
+                <form id="careerForm" enctype="multipart/form-data" novalidate>
+
+                    <!-- FORMINIT FIELDS -->
+                    <input type="hidden" name="fi-text-subject" value="New Career Application - AssureInfo Technologies">
+
+                    <input type="hidden" name="fi-text-source" value="AssureInfo Careers Website">
+
+                    <!-- NAME -->
+                    <div class="form-group" id="nameGroup">
+
+                        <label for="name">Name</label>
+
+                        <input
+                            type="text"
+                            id="name"
+                            name="fi-sender-fullName"
+                            required
+                            autocomplete="name"
+                            placeholder="Enter your full name">
+
+                        <div class="error-text">
+                            Please enter your full name.
+                        </div>
+
+                    </div>
+
+                    <!-- PHONE -->
+                    <div class="form-group" id="phoneGroup">
+
+                        <label for="phone">Phone</label>
+
+                        <input
+                            type="tel"
+                            id="phone"
+                            name="fi-phone-phone"
+                            required
+                            inputmode="numeric"
+                            maxlength="10"
+                            autocomplete="tel-national"
+                            placeholder="Enter your 10-digit phone number">
+
+                        <div class="error-text">
+                            Please enter a valid 10-digit Indian mobile number.
+                        </div>
+
+                    </div>
+
+                    <!-- EMAIL -->
+                    <div class="form-group" id="emailGroup">
+
+                        <label for="email">Email ID</label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="fi-sender-email"
+                            required
+                            autocomplete="email"
+                            placeholder="Enter your email address">
+
+                        <div class="error-text">
+                            Please enter a valid email address.
+                        </div>
+
+                    </div>
+
+                    <!-- RESUME -->
+                    <div class="form-group" id="resumeGroup">
+
+                        <label for="resume">Resume (Attachment)</label>
+
+                        <div class="file-upload-wrapper">
+
+                            <input
+                                type="file"
+                                id="resume"
+                                name="fi-file-resume"
+                                class="file-upload-input"
+                                accept=".pdf,.doc,.docx"
+                                required>
+
+                            <label for="resume" class="file-upload-label" id="fileLabel">
+
+                                <span id="fileName">
+                                    Choose your resume (PDF, DOC, DOCX - Max 10MB)
+                                </span>
+
+                                <svg class="upload-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                    <polyline points="17 8 12 3 7 8"></polyline>
+                                    <line x1="12" y1="3" x2="12" y2="15"></line>
+                                </svg>
+
+                                <span class="upload-success-tick">✓</span>
+
+                            </label>
+
+                        </div>
+
+                        <div class="error-text">
+                            Please upload a valid PDF, DOC or DOCX file under 10MB.
+                        </div>
+
+                    </div>
+
+                    <!-- SUBMIT BUTTON -->
+                    <button type="submit" class="form-btn" id="submitBtn">
+                        Apply Now
+                    </button>
+
+                    <!-- SUBMISSION MESSAGE -->
+                    <div class="form-message" id="formMessage"></div>
+
+                </form>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <site-footer></site-footer>
+
+    <!-- FORMINIT SDK -->
+    <script src="https://forminit.com/sdk/v1/forminit.js"></script>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+
+        const FORM_ID = "1xfqz7zo2rr";
+        const MAX_FILE_SIZE = 10 * 1024 * 1024; // 10 MB
+
+        const form = document.getElementById("careerForm");
+
+        const nameInput = document.getElementById("name");
+        const phoneInput = document.getElementById("phone");
+        const emailInput = document.getElementById("email");
+        const resumeInput = document.getElementById("resume");
+
+        const fileName = document.getElementById("fileName");
+        const fileLabel = document.getElementById("fileLabel");
+
+        const submitBtn = document.getElementById("submitBtn");
+        const formMessage = document.getElementById("formMessage");
+
+
+        /* FILE NAME AND SUCCESS TICK */
+
+        resumeInput.addEventListener("change", function () {
+
+            const file = this.files[0];
+            const group = document.getElementById("resumeGroup");
+
+            group.classList.remove("has-error", "has-success");
+
+            if (!file) {
+
+                fileName.textContent =
+                    "Choose your resume (PDF, DOC, DOCX - Max 10MB)";
+
+                fileLabel.classList.remove("has-file");
+
+                return;
+            }
+
+            const allowedExtensions = /\.(pdf|doc|docx)$/i;
+
+            if (!allowedExtensions.test(file.name) || file.size > MAX_FILE_SIZE) {
+
+                fileName.textContent = "Invalid file. Please select another.";
+
+                fileLabel.classList.remove("has-file");
+
+                group.classList.add("has-error");
+
+                group.querySelector(".error-text").textContent =
+                    "Please upload a valid PDF, DOC or DOCX file under 10MB.";
+
+                this.value = "";
+
+                return;
+            }
+
+            fileName.textContent = file.name;
+
+            fileLabel.classList.add("has-file");
+
+            group.classList.add("has-success");
+
+        });
+
+
+        /* PHONE: NUMBERS ONLY */
+
+        phoneInput.addEventListener("input", function () {
+
+            this.value = this.value.replace(/[^0-9]/g, "").slice(0, 10);
+
+            document.getElementById("phoneGroup").classList.remove("has-error");
+
+        });
+
+
+        /* NAME VALIDATION */
+
+        nameInput.addEventListener("input", function () {
+
+            document.getElementById("nameGroup").classList.remove("has-error");
+
+        });
+
+
+        /* EMAIL VALIDATION */
+
+        emailInput.addEventListener("input", function () {
+
+            document.getElementById("emailGroup").classList.remove("has-error");
+
+        });
+
+
+        /* FORM VALIDATION */
+
+        function validateForm() {
+
+            let valid = true;
+
+            const name = nameInput.value.trim();
+            const phone = phoneInput.value.trim();
+            const email = emailInput.value.trim();
+            const file = resumeInput.files[0];
+
+            /* RESET ERRORS */
+
+            document.querySelectorAll(".form-group").forEach(group => {
+                group.classList.remove("has-error");
+            });
+
+
+            /* NAME */
+
+            if (name.length < 2) {
+
+                document.getElementById("nameGroup").classList.add("has-error");
+
+                document.querySelector("#nameGroup .error-text").textContent =
+                    "Please enter your full name.";
+
+                valid = false;
+
+            }
+
+
+            /* PHONE */
+
+            if (!/^[0-9]{10}$/.test(phone)) {
+
+                document.getElementById("phoneGroup").classList.add("has-error");
+
+                document.querySelector("#phoneGroup .error-text").textContent =
+                    "Please enter a valid 10-digit Indian mobile number.";
+
+                valid = false;
+
+            }
+
+
+            /* EMAIL */
+
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            if (!emailPattern.test(email)) {
+
+                document.getElementById("emailGroup").classList.add("has-error");
+
+                document.querySelector("#emailGroup .error-text").textContent =
+                    "Please enter a valid email address.";
+
+                valid = false;
+
+            }
+
+
+            /* RESUME */
+
+            const resumeGroup = document.getElementById("resumeGroup");
+
+            if (!file) {
+
+                resumeGroup.classList.add("has-error");
+
+                resumeGroup.querySelector(".error-text").textContent =
+                    "Please upload your resume.";
+
+                valid = false;
+
+            } else {
+
+                const allowedExtensions = /\.(pdf|doc|docx)$/i;
+
+                if (!allowedExtensions.test(file.name) || file.size > MAX_FILE_SIZE) {
+
+                    resumeGroup.classList.add("has-error");
+
+                    resumeGroup.querySelector(".error-text").textContent =
+                        "Please upload a valid PDF, DOC or DOCX file under 10MB.";
+
+                    valid = false;
+
+                }
+
+            }
+
+            return valid;
+
+        }
+
+
+        /* FORM SUBMISSION */
+
+        form.addEventListener("submit", async function (e) {
+
+            e.preventDefault();
+
+            formMessage.className = "form-message";
+            formMessage.style.display = "none";
+
+            if (!validateForm()) {
+
+                const firstError = form.querySelector(".has-error input");
+
+                if (firstError) {
+                    firstError.focus();
+                }
+
+                return;
+
+            }
+
+            submitBtn.disabled = true;
+            submitBtn.textContent = "Submitting Application...";
+
+
+            try {
+
+                const formData = new FormData(form);
+
+                /*
+                 * Convert Indian 10-digit number into E.164 format.
+                 * Example: 7010615338 becomes +917010615338.
+                 */
+
+                const phone = phoneInput.value.trim();
+
+                formData.set("fi-phone-phone", "+91" + phone);
+
+
+                const forminit = new Forminit();
+
+                const { data, error } = await forminit.submit(FORM_ID, formData);
+
+
+                if (error) {
+
+                    throw new Error(error.message || "Submission failed.");
+
+                }
+
+
+                /* SUCCESS */
+
+                formMessage.textContent =
+                    "✓ Your application has been submitted successfully! We will contact you if your profile matches our requirements.";
+
+                formMessage.className = "form-message success";
+
+                formMessage.style.display = "block";
+
+
+                /* RESET FORM */
+
+                form.reset();
+
+                fileName.textContent =
+                    "Choose your resume (PDF, DOC, DOCX - Max 10MB)";
+
+                fileLabel.classList.remove("has-file");
+
+                document.querySelectorAll(".form-group").forEach(group => {
+                    group.classList.remove("has-error", "has-success");
+                });
+
+            }
+
+            catch (error) {
+
+                console.error("Form submission error:", error);
+
+                formMessage.textContent =
+                    "Unable to submit your application. Please try again later or contact support@assureinfo.in.";
+
+                formMessage.className = "form-message error";
+
+                formMessage.style.display = "block";
+
+            }
+
+            finally {
+
+                submitBtn.disabled = false;
+
+                submitBtn.textContent = "Apply Now";
+
+            }
+
+        });
+
+    });
+    </script>
+
+</body>
+</html>

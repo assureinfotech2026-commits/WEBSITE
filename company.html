@@ -1,0 +1,1079 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Company | AssureInfo Technologies Private Limited</title>
+
+    <meta name="description" content="Learn about AssureInfo Technologies Private Limited, our company, expertise, and technology consulting services for laboratories and quality-driven organizations.">
+
+    <meta name="theme-color" content="#f5f8ff">
+
+    <link rel="icon" href="logo.png" type="image/png">
+    <link rel="stylesheet" href="css/nav.css">
+    <script src="layout.js" defer></script>
+
+    <style>
+        /* =========================
+           RESET & GLOBAL
+        ========================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f8ff;
+            color: #172b4d;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        :root {
+            --primary: #123b75;
+            --primary-dark: #0b2348;
+            --secondary: #2468b4;
+            --accent: #e5a928;
+            --light: #f5f8ff;
+            --white: #ffffff;
+            --text: #263b59;
+            --muted: #687993;
+            --border: #dce5f1;
+        }
+
+        .company-container {
+            width: 100%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        /* =========================
+           HERO SECTION
+        ========================= */
+
+        .company-hero {
+            width: 100%;
+            padding: 100px 7%;
+            background: linear-gradient(120deg, #0b2348, #174b88);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .company-hero::before {
+            content: "";
+            position: absolute;
+            width: 450px;
+            height: 450px;
+            border: 1px solid rgba(255,255,255,0.12);
+            border-radius: 50%;
+            right: -100px;
+            top: -180px;
+        }
+
+        .company-hero::after {
+            content: "";
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 50%;
+            right: 100px;
+            bottom: -200px;
+        }
+
+        .hero-content {
+            max-width: 1400px;
+            margin: auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-label {
+            display: inline-block;
+            color: #f5c45b;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            margin-bottom: 25px;
+        }
+
+        .company-hero h1 {
+            max-width: 850px;
+            font-size: clamp(36px, 5vw, 65px);
+            line-height: 1.15;
+            color: #ffffff;
+            margin-bottom: 25px;
+        }
+
+        .company-hero h1 span {
+            color: #f5c45b;
+        }
+
+        .company-hero p {
+            max-width: 750px;
+            font-size: 17px;
+            line-height: 1.9;
+            color: #dce8f8;
+        }
+
+        .hero-divider {
+            width: 65px;
+            height: 4px;
+            background: #e5a928;
+            margin-top: 35px;
+            border-radius: 10px;
+        }
+
+        /* =========================
+           COMPANY OVERVIEW
+        ========================= */
+
+        .company-overview {
+            padding: 100px 7%;
+            background: #ffffff;
+        }
+
+        .overview-grid {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 75px;
+            align-items: center;
+        }
+
+        .section-label {
+            display: inline-block;
+            color: #b57c0c;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 2.5px;
+            margin-bottom: 20px;
+        }
+
+        .section-heading {
+            font-size: clamp(30px, 3.5vw, 45px);
+            line-height: 1.2;
+            color: #123b75;
+            margin-bottom: 25px;
+        }
+
+        .overview-text p {
+            font-size: 15px;
+            line-height: 1.95;
+            color: #61718a;
+            margin-bottom: 18px;
+        }
+
+        .company-info-card {
+            background: #f2f6fc;
+            border: 1px solid #dce5f1;
+            border-radius: 18px;
+            padding: 40px;
+            box-shadow: 0 15px 45px rgba(18, 59, 117, 0.07);
+        }
+
+        .company-info-card h3 {
+            font-size: 23px;
+            color: #123b75;
+            margin-bottom: 25px;
+        }
+
+        .info-item {
+            padding: 17px 0;
+            border-bottom: 1px solid #dce5f1;
+        }
+
+        .info-item:last-child {
+            border-bottom: none;
+        }
+
+        .info-item span {
+            display: block;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            color: #8a99ae;
+            margin-bottom: 8px;
+        }
+
+        .info-item strong {
+            font-size: 14px;
+            line-height: 1.6;
+            color: #23446f;
+            overflow-wrap: anywhere;
+        }
+
+        /* =========================
+           COMPANY HIGHLIGHTS
+        ========================= */
+
+        .company-highlights {
+            padding: 75px 7%;
+            background: #edf3fc;
+        }
+
+        .highlights-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .highlight-card {
+            background: #ffffff;
+            padding: 35px;
+            border-radius: 14px;
+            border: 1px solid #dce5f1;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .highlight-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 15px 35px rgba(18, 59, 117, 0.1);
+        }
+
+        .highlight-number {
+            font-size: 35px;
+            font-weight: 700;
+            color: #e0a126;
+            margin-bottom: 18px;
+        }
+
+        .highlight-card h3 {
+            font-size: 19px;
+            color: #123b75;
+            margin-bottom: 13px;
+        }
+
+        .highlight-card p {
+            font-size: 14px;
+            line-height: 1.8;
+            color: #687993;
+        }
+
+        /* =========================
+           WHY CHOOSE US
+        ========================= */
+
+        .why-choose-section {
+            padding: 100px 7%;
+            background: #ffffff;
+        }
+
+        .section-header {
+            max-width: 750px;
+            margin: 0 auto 55px;
+            text-align: center;
+        }
+
+        .section-header p {
+            font-size: 15px;
+            line-height: 1.8;
+            color: #687993;
+        }
+
+        .reasons-grid {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 22px;
+        }
+
+        .reason-card {
+            background: #f5f8ff;
+            border: 1px solid #dce5f1;
+            border-radius: 14px;
+            padding: 30px 25px;
+            min-height: 230px;
+            transition: all 0.3s ease;
+        }
+
+        .reason-card:hover {
+            background: #123b75;
+            border-color: #123b75;
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(18, 59, 117, 0.16);
+        }
+
+        .reason-icon {
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #e4edf9;
+            border-radius: 10px;
+            color: #174b88;
+            margin-bottom: 25px;
+            transition: 0.3s ease;
+        }
+
+        .reason-icon svg {
+            width: 25px;
+            height: 25px;
+        }
+
+        .reason-card:hover .reason-icon {
+            background: #ffffff;
+            color: #123b75;
+        }
+
+        .reason-number {
+            display: block;
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            color: #b57c0c;
+            margin-bottom: 12px;
+        }
+
+        .reason-card h3 {
+            font-size: 17px;
+            line-height: 1.5;
+            color: #123b75;
+            transition: 0.3s ease;
+        }
+
+        .reason-card:hover h3 {
+            color: #ffffff;
+        }
+
+        .reason-card:hover .reason-number {
+            color: #f5c45b;
+        }
+
+        /* =========================
+           OUR APPROACH
+        ========================= */
+
+        .approach-section {
+            padding: 90px 7%;
+            background: #0b2348;
+        }
+
+        .approach-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .approach-content .section-label {
+            color: #f5c45b;
+        }
+
+        .approach-content .section-heading {
+            color: #ffffff;
+        }
+
+        .approach-content p {
+            font-size: 15px;
+            line-height: 1.9;
+            color: #c8d7ec;
+        }
+
+        .approach-list {
+            display: grid;
+            gap: 18px;
+        }
+
+        .approach-item {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            padding: 20px;
+            background: rgba(255,255,255,0.07);
+            border: 1px solid rgba(255,255,255,0.12);
+            border-radius: 10px;
+        }
+
+        .approach-check {
+            width: 35px;
+            height: 35px;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #e5a928;
+            color: #0b2348;
+            border-radius: 50%;
+            font-weight: 700;
+        }
+
+        .approach-item h3 {
+            font-size: 15px;
+            color: #ffffff;
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        .footer {
+            background: #071a35;
+            color: #ffffff;
+            padding: 75px 7% 0;
+        }
+
+        .footer-container {
+            width: 100%;
+            max-width: 1400px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1.4fr 1.3fr;
+            gap: 45px;
+            padding-bottom: 55px;
+        }
+
+        .footer-brand {
+            max-width: 360px;
+        }
+
+        .footer-logo {
+            width: 150px;
+            height: auto;
+            margin-bottom: 22px;
+            background: #ffffff;
+            padding: 8px;
+            border-radius: 5px;
+        }
+
+        .footer-brand p {
+            font-size: 14px;
+            line-height: 1.9;
+            color: #aebed4;
+        }
+
+        .footer-column h3 {
+            font-size: 17px;
+            margin-bottom: 25px;
+            color: #ffffff;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 15px;
+        }
+
+        .footer-column ul li a {
+            font-size: 14px;
+            color: #aebed4;
+            transition: color 0.3s ease;
+        }
+
+        .footer-column ul li a:hover {
+            color: #f5c45b;
+        }
+
+        .footer-contact p {
+            font-size: 14px;
+            line-height: 1.8;
+            color: #aebed4;
+            margin-bottom: 17px;
+        }
+
+        .footer-contact strong {
+            color: #ffffff;
+        }
+
+        .footer-bottom {
+            width: 100%;
+            max-width: 1400px;
+            margin: auto;
+            padding: 25px 0;
+            border-top: 1px solid rgba(255,255,255,0.15);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .footer-bottom p {
+            font-size: 12px;
+            color: #aebed4;
+        }
+
+        .footer-bottom-links {
+            display: flex;
+            gap: 25px;
+        }
+
+        .footer-bottom-links a {
+            font-size: 12px;
+            color: #aebed4;
+        }
+
+        .footer-bottom-links a:hover {
+            color: #f5c45b;
+        }
+
+        /* =========================
+           RESPONSIVE DESIGN
+        ========================= */
+
+        @media (max-width: 1100px) {
+
+            .reasons-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .highlights-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 900px) {
+
+            .overview-grid,
+            .approach-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .company-overview,
+            .why-choose-section {
+                padding: 75px 5%;
+            }
+        }
+
+        @media (max-width: 768px) {
+
+            .company-hero {
+                padding: 75px 25px;
+            }
+
+            .company-hero p {
+                font-size: 15px;
+            }
+
+            .company-overview,
+            .why-choose-section {
+                padding: 65px 22px;
+            }
+
+            .company-highlights {
+                padding: 60px 22px;
+            }
+
+            .highlights-grid {
+                grid-template-columns: 1fr;
+                gap: 18px;
+            }
+
+            .reasons-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 15px;
+            }
+
+            .reason-card {
+                padding: 25px 18px;
+                min-height: 210px;
+            }
+
+            .approach-section {
+                padding: 70px 22px;
+            }
+
+            .footer {
+                padding: 55px 22px 0;
+            }
+
+            .footer-container {
+                grid-template-columns: 1fr 1fr;
+                gap: 35px;
+            }
+        }
+
+        @media (max-width: 480px) {
+
+            .company-hero {
+                padding: 65px 20px;
+            }
+
+            .company-hero h1 {
+                font-size: 36px;
+            }
+
+            .section-heading {
+                font-size: 29px;
+            }
+
+            .company-info-card {
+                padding: 25px;
+            }
+
+            .reasons-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .reason-card {
+                min-height: auto;
+            }
+
+            .footer-container {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .footer-bottom-links {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+            }
+        }
+
+        /* =========================
+           ACCESSIBILITY
+        ========================= */
+
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                scroll-behavior: auto !important;
+                transition-duration: 0.01ms !important;
+                animation-duration: 0.01ms !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <site-navbar></site-navbar>
+
+
+    <!-- HERO SECTION -->
+    <section class="company-hero">
+
+        <div class="hero-content">
+
+            <span class="hero-label">ABOUT OUR COMPANY</span>
+
+            <h1>
+                Building Better
+                <span>Technology Solutions</span>
+                for Modern Organizations
+            </h1>
+
+            <p>
+                AssureInfo Technologies Private Limited delivers specialized
+                consulting and technology solutions for laboratories and
+                quality-driven organizations, supporting digital transformation
+                and operational excellence.
+            </p>
+
+            <div class="hero-divider"></div>
+
+        </div>
+
+    </section>
+
+
+    <!-- COMPANY OVERVIEW -->
+    <section class="company-overview">
+
+        <div class="company-container overview-grid">
+
+            <div class="overview-text">
+
+                <span class="section-label">WHO WE ARE</span>
+
+                <h2 class="section-heading">
+                    About AssureInfo Technologies
+                </h2>
+
+                <p>
+                    AssureInfo Technologies Pvt. Ltd. is a specialized
+                    consulting and technology services company dedicated
+                    to supporting digital transformation initiatives across
+                    laboratories and quality-driven organizations.
+                </p>
+
+                <p>
+                    With expertise in laboratory informatics and regulated
+                    environments, we focus on providing reliable, scalable,
+                    and compliance-focused solutions that help organizations
+                    improve their operational efficiency.
+                </p>
+
+                <p>
+                    Our approach combines technology, domain knowledge,
+                    and structured project delivery to support organizations
+                    throughout their digital transformation journey.
+                </p>
+
+            </div>
+
+
+            <div class="company-info-card">
+
+                <h3>Corporate Information</h3>
+
+                <div class="info-item">
+                    <span>COMPANY NAME</span>
+                    <strong>AssureInfo Technologies Private Limited</strong>
+                </div>
+
+                <div class="info-item">
+                    <span>CORPORATE IDENTIFICATION NUMBER</span>
+                    <strong>U62013KA2026PTC222663</strong>
+                </div>
+
+                <div class="info-item">
+                    <span>BUSINESS CATEGORY</span>
+                    <strong>Information Technology and Technology Consulting</strong>
+                </div>
+
+                <div class="info-item">
+                    <span>REGISTERED COUNTRY</span>
+                    <strong>India</strong>
+                </div>
+
+                <div class="info-item">
+                    <span>BUSINESS FOCUS</span>
+                    <strong>Laboratory Informatics, Digital Transformation and Enterprise Solutions</strong>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- COMPANY HIGHLIGHTS -->
+    <section class="company-highlights">
+
+        <div class="company-container">
+
+            <div class="section-header">
+
+                <span class="section-label">OUR FOCUS</span>
+
+                <h2 class="section-heading">
+                    Technology Driven. Quality Focused.
+                </h2>
+
+                <p>
+                    We focus on delivering technology solutions that
+                    support business processes, improve efficiency,
+                    and strengthen organizational capabilities.
+                </p>
+
+            </div>
+
+
+            <div class="highlights-grid">
+
+                <div class="highlight-card">
+                    <div class="highlight-number">01</div>
+                    <h3>Laboratory Informatics</h3>
+                    <p>
+                        Technology solutions supporting laboratory
+                        information management and digital operations.
+                    </p>
+                </div>
+
+                <div class="highlight-card">
+                    <div class="highlight-number">02</div>
+                    <h3>Digital Transformation</h3>
+                    <p>
+                        Supporting organizations in modernizing
+                        workflows and improving operational processes.
+                    </p>
+                </div>
+
+                <div class="highlight-card">
+                    <div class="highlight-number">03</div>
+                    <h3>Enterprise Solutions</h3>
+                    <p>
+                        Business-focused technology solutions designed
+                        to support organizational requirements.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- WHY CHOOSE US -->
+    <section class="why-choose-section">
+
+        <div class="company-container">
+
+            <div class="section-header">
+
+                <span class="section-label">OUR ADVANTAGES</span>
+
+                <h2 class="section-heading">
+                    Why Choose AssureInfo Technologies?
+                </h2>
+
+                <p>
+                    Our commitment to domain knowledge, structured
+                    delivery, technology integration, and customer
+                    support helps us build dependable solutions.
+                </p>
+
+            </div>
+
+
+            <div class="reasons-grid">
+
+
+                <!-- REASON 01 -->
+                <div class="reason-card">
+
+                    <div class="reason-icon">
+                        <svg viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1.7"
+                            stroke-linecap="round" stroke-linejoin="round">
+
+                            <rect x="2" y="7" width="20" height="14" rx="2"></rect>
+                            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+
+                        </svg>
+                    </div>
+
+
+                    <h3>Deep Domain Expertise</h3>
+
+                </div>
+
+
+                <!-- REASON 02 -->
+                <div class="reason-card">
+
+                    <div class="reason-icon">
+                        <svg viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1.7"
+                            stroke-linecap="round" stroke-linejoin="round">
+
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+
+                        </svg>
+                    </div>
+
+
+                    <h3>End-to-End Project Delivery</h3>
+
+                </div>
+
+
+                <!-- REASON 03 -->
+                <div class="reason-card">
+
+                    <div class="reason-icon">
+                        <svg viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1.7"
+                            stroke-linecap="round" stroke-linejoin="round">
+
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="2" y1="12" x2="22" y2="12"></line>
+                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+
+                        </svg>
+                    </div>
+
+
+                    <h3>Global Delivery Model</h3>
+
+                </div>
+
+
+                <!-- REASON 04 -->
+                <div class="reason-card">
+
+                    <div class="reason-icon">
+                        <svg viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1.7"
+                            stroke-linecap="round" stroke-linejoin="round">
+
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+
+                        </svg>
+                    </div>
+
+
+                    <h3>Regulatory Compliance Focus</h3>
+
+                </div>
+
+
+                <!-- REASON 05 -->
+                <div class="reason-card">
+
+                    <div class="reason-icon">
+                        <svg viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1.7"
+                            stroke-linecap="round" stroke-linejoin="round">
+
+                            <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                            <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+
+                        </svg>
+                    </div>
+
+
+
+                    <h3>Strong Integration Capabilities</h3>
+
+                </div>
+
+
+                <!-- REASON 06 -->
+                <div class="reason-card">
+
+                    <div class="reason-icon">
+                        <svg viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1.7"
+                            stroke-linecap="round" stroke-linejoin="round">
+
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+
+                        </svg>
+                    </div>
+
+
+                    <h3>Experienced Consultants</h3>
+
+                </div>
+
+
+                <!-- REASON 07 -->
+                <div class="reason-card">
+
+                    <div class="reason-icon">
+                        <svg viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1.7"
+                            stroke-linecap="round" stroke-linejoin="round">
+
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 16 14"></polyline>
+
+                        </svg>
+                    </div>
+
+
+                    <h3>Long-Term Managed Support</h3>
+
+                </div>
+
+
+                <!-- REASON 08 -->
+                <div class="reason-card">
+
+                    <div class="reason-icon">
+                        <svg viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1.7"
+                            stroke-linecap="round" stroke-linejoin="round">
+
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+
+                        </svg>
+                    </div>
+
+
+
+                    <h3>Customer-Centric Approach</h3>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- OUR APPROACH -->
+    <section class="approach-section">
+
+        <div class="company-container approach-grid">
+
+            <div class="approach-content">
+
+                <span class="section-label">OUR APPROACH</span>
+
+                <h2 class="section-heading">
+                    Creating Value Through Technology and Expertise
+                </h2>
+
+                <p>
+                    We believe successful technology implementation
+                    requires more than software. It requires an
+                    understanding of business processes, organizational
+                    needs, and long-term objectives.
+                </p>
+
+            </div>
+
+
+            <div class="approach-list">
+
+                <div class="approach-item">
+                    <div class="approach-check">✓</div>
+                    <h3>Understanding Client Requirements</h3>
+                </div>
+
+                <div class="approach-item">
+                    <div class="approach-check">✓</div>
+                    <h3>Delivering Structured Technology Solutions</h3>
+                </div>
+
+                <div class="approach-item">
+                    <div class="approach-check">✓</div>
+                    <h3>Supporting Integration and Implementation</h3>
+                </div>
+
+                <div class="approach-item">
+                    <div class="approach-check">✓</div>
+                    <h3>Building Long-Term Client Relationships</h3>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- FOOTER -->
+    <site-footer></site-footer>
+</body>
+</html>
