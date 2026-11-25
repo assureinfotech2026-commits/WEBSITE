@@ -1,84 +1,263 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Terms and Conditions of AssureInfo Technologies Pvt. Ltd.">
-    <title>Terms & Conditions | AssureInfo Technologies</title>
+
+    <meta name="description" content="Terms and Conditions governing the use of the website and services of AssureInfo Technologies Private Limited.">
+
+    <meta name="robots" content="index, follow">
+
+    <meta name="theme-color" content="#071a3d">
+
+    <title>Terms & Conditions | AssureInfo Technologies Pvt. Ltd.</title>
 
     <link rel="icon" type="image/png" href="logo.png">
 
-    <!-- Existing website CSS -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="navbar.css">
 
     <style>
+
+        /* =====================================
+           LEGAL PAGE
+        ===================================== */
+
         .legal-page {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 150px 25px 80px;
+            max-width: 1150px;
+            margin: auto;
+            padding: 150px 25px 85px;
             color: inherit;
-            line-height: 1.8;
+            line-height: 1.85;
         }
+
+        /* HEADER */
 
         .legal-header {
             text-align: center;
             margin-bottom: 45px;
         }
 
+        .legal-label {
+            display: inline-block;
+            padding: 7px 18px;
+            margin-bottom: 18px;
+
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+
+            color: #e1bd70;
+            background: rgba(214,173,85,0.10);
+
+            border: 1px solid rgba(214,173,85,0.25);
+            border-radius: 30px;
+        }
+
         .legal-header h1 {
-            font-size: clamp(2rem, 5vw, 3rem);
+            font-size: clamp(2.2rem, 5vw, 3.5rem);
+            font-weight: 800;
+            letter-spacing: -1px;
             margin-bottom: 12px;
         }
 
         .legal-header p {
-            opacity: 0.8;
+            opacity: 0.7;
+            font-size: 0.9rem;
         }
 
+        .legal-divider {
+            width: 75px;
+            height: 3px;
+            background: #d6ad55;
+            margin: 22px auto 0;
+            border-radius: 5px;
+        }
+
+        /* MAIN CONTENT */
+
         .legal-content {
-            background: rgba(255,255,255,0.04);
-            border: 1px solid rgba(255,255,255,0.1);
-            border-radius: 14px;
-            padding: clamp(20px, 4vw, 45px);
+            background: rgba(255,255,255,0.035);
+            border: 1px solid rgba(255,255,255,0.10);
+            border-radius: 18px;
+
+            padding: clamp(22px, 5vw, 55px);
+
+            box-shadow: 0 15px 50px rgba(0,0,0,0.12);
+        }
+
+        /* INTRODUCTION */
+
+        .legal-intro {
+            padding: 22px 25px;
+            margin-bottom: 35px;
+
+            background: rgba(214,173,85,0.07);
+            border-left: 4px solid #d6ad55;
+
+            border-radius: 5px 12px 12px 5px;
+        }
+
+        .legal-intro p {
+            margin: 0;
+        }
+
+        /* SECTIONS */
+
+        .legal-section {
+            margin-top: 35px;
+            padding-bottom: 25px;
+
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+        }
+
+        .legal-section:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
         }
 
         .legal-content h2 {
-            font-size: 1.3rem;
-            margin: 30px 0 12px;
+            font-size: clamp(1.1rem, 2vw, 1.35rem);
+            font-weight: 700;
+
+            margin: 0 0 16px;
+
+            display: flex;
+            align-items: center;
+            gap: 12px;
         }
 
-        .legal-content h2:first-child {
-            margin-top: 0;
+        .section-number {
+            min-width: 34px;
+            height: 34px;
+
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+
+            color: #e3bd70;
+            background: rgba(214,173,85,0.12);
+
+            border: 1px solid rgba(214,173,85,0.2);
+            border-radius: 9px;
+
+            font-size: 0.85rem;
         }
 
         .legal-content p {
-            margin-bottom: 15px;
+            margin-bottom: 14px;
+            font-size: 0.96rem;
+            opacity: 0.91;
         }
 
         .legal-content ul {
             padding-left: 25px;
-            margin-bottom: 18px;
+            margin: 12px 0 18px;
         }
 
         .legal-content li {
-            margin-bottom: 8px;
+            margin-bottom: 10px;
+            padding-left: 5px;
+            font-size: 0.95rem;
+            opacity: 0.9;
+        }
+
+        .legal-content li::marker {
+            color: #d6ad55;
         }
 
         .legal-content a {
-            color: var(--gold, #d6ad55);
+            color: #e3bd70;
             text-decoration: none;
+            font-weight: 600;
         }
 
         .legal-content a:hover {
             text-decoration: underline;
         }
 
-        @media(max-width: 768px) {
-            .legal-page {
-                padding: 120px 16px 50px;
-            }
+        /* IMPORTANT NOTICE */
+
+        .legal-notice {
+            padding: 20px 23px;
+            margin: 22px 0;
+
+            background: rgba(255,255,255,0.045);
+            border: 1px solid rgba(255,255,255,0.10);
+
+            border-radius: 12px;
         }
+
+        .legal-notice strong {
+            color: #e3bd70;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        /* CONTACT */
+
+        .legal-contact {
+            padding: 25px;
+
+            background: rgba(214,173,85,0.07);
+            border: 1px solid rgba(214,173,85,0.18);
+
+            border-radius: 13px;
+        }
+
+        .legal-contact strong {
+            color: #e3bd70;
+        }
+
+        .legal-contact p {
+            margin-bottom: 7px;
+        }
+
+        /* FOOTNOTE */
+
+        .legal-footnote {
+            text-align: center;
+            margin-top: 35px;
+
+            font-size: 0.82rem;
+            opacity: 0.6;
+        }
+
+        /* RESPONSIVE */
+
+        @media(max-width: 768px) {
+
+            .legal-page {
+                padding: 120px 16px 55px;
+            }
+
+            .legal-content {
+                padding: 23px 19px;
+                border-radius: 13px;
+            }
+
+            .legal-header {
+                margin-bottom: 30px;
+            }
+
+            .legal-section {
+                margin-top: 28px;
+            }
+
+            .legal-content h2 {
+                align-items: flex-start;
+            }
+
+            .legal-intro {
+                padding: 18px;
+            }
+
+        }
+
     </style>
+
 </head>
 
 <body>
@@ -88,236 +267,1252 @@
     <main class="legal-page">
 
         <header class="legal-header">
+
+            <span class="legal-label">Legal Information</span>
+
             <h1>Terms & Conditions</h1>
-            <p>Last Updated: 25 November 2026</p>
+
+            <p>
+                Effective Date: 25 November 2026
+                <br>
+                Last Updated: 25 November 2026
+            </p>
+
+            <div class="legal-divider"></div>
+
         </header>
+
 
         <div class="legal-content">
 
-            <p>
-                Welcome to the website of AssureInfo Technologies Pvt. Ltd.
-                ("AssureInfo", "Company", "we", "our" or "us").
-                These Terms and Conditions govern your access to and use
-                of our website and the information and services made
-                available through it.
-            </p>
 
-            <p>
-                By accessing or using this website, you acknowledge that
-                you have read and understood these Terms and Conditions.
-                If you do not agree with them, please discontinue using
-                the website.
-            </p>
+            <div class="legal-intro">
 
-            <h2>1. About Our Company</h2>
+                <p>
+                    These Terms and Conditions constitute a legally
+                    relevant agreement governing access to and use
+                    of the website, products and services offered
+                    by AssureInfo Technologies Private Limited.
+                    Please read these terms carefully before using
+                    our website or engaging our services.
+                </p>
 
-            <p>
-                AssureInfo Technologies Pvt. Ltd. provides technology
-                consulting and professional services focused on laboratory
-                informatics, digital transformation, enterprise systems
-                and technology support solutions.
-            </p>
+            </div>
 
-            <h2>2. Website Usage</h2>
 
-            <p>You agree to use this website only for lawful purposes.</p>
+            <!-- 1 -->
 
-            <p>You must not:</p>
+            <section class="legal-section">
 
-            <ul>
-                <li>Use the website for any unlawful or fraudulent activity.</li>
-                <li>Attempt unauthorized access to our systems or servers.</li>
-                <li>Disrupt or interfere with website functionality.</li>
-                <li>Upload or transmit malicious software or harmful content.</li>
-                <li>Copy, reproduce or misuse website content without permission.</li>
-            </ul>
+                <h2>
+                    <span class="section-number">01</span>
+                    Introduction and Acceptance
+                </h2>
 
-            <h2>3. Services and Engagements</h2>
+                <p>
+                    Welcome to AssureInfo Technologies Private Limited
+                    (hereinafter referred to as "AssureInfo",
+                    "Company", "we", "our" or "us").
+                </p>
 
-            <p>
-                Information displayed on this website is provided for
-                general informational purposes. Specific services,
-                deliverables, timelines and commercial terms will be
-                governed by the relevant proposal, quotation, agreement
-                or written confirmation between the Company and the client.
-            </p>
+                <p>
+                    These Terms and Conditions govern your access to,
+                    browsing of and use of our website, digital
+                    platforms, products and professional services.
+                </p>
 
-            <p>
-                The Company reserves the right to modify, discontinue
-                or update its services, subject to existing contractual
-                obligations.
-            </p>
+                <p>
+                    By accessing this website, submitting an enquiry,
+                    requesting a quotation or engaging our services,
+                    you acknowledge that you have read and understood
+                    these Terms.
+                </p>
 
-            <h2>4. Quotations and Payments</h2>
+                <p>
+                    If you do not agree with these Terms, you should
+                    discontinue using the website and refrain from
+                    engaging services through it.
+                </p>
 
-            <p>
-                Service fees, payment schedules, taxes and other applicable
-                charges will be communicated to clients through quotations,
-                invoices or written agreements.
-            </p>
+                <p>
+                    Where a separate written agreement, proposal,
+                    statement of work or service contract exists,
+                    that document shall govern the specific engagement
+                    to the extent of any inconsistency with these
+                    general website Terms.
+                </p>
 
-            <ul>
-                <li>Clients are responsible for making payments according
-                    to the agreed payment schedule.</li>
-                <li>Applicable taxes, including GST where required by law,
-                    may be charged separately.</li>
-                <li>Any additional work outside the agreed scope may involve
-                    additional charges.</li>
-                <li>Payment terms, refunds and cancellation conditions will
-                    be governed by the applicable service agreement or
-                    written confirmation.</li>
-            </ul>
+            </section>
 
-            <h2>5. Client Responsibilities</h2>
 
-            <p>Clients agree to:</p>
+            <!-- 2 -->
 
-            <ul>
-                <li>Provide accurate and complete information required
-                    for the services.</li>
-                <li>Provide necessary documents, approvals and access
-                    within agreed timelines.</li>
-                <li>Review and approve deliverables where required.</li>
-                <li>Ensure that information and materials supplied to
-                    the Company can lawfully be shared and used for
-                    the agreed services.</li>
-            </ul>
+            <section class="legal-section">
 
-            <h2>6. Intellectual Property</h2>
+                <h2>
+                    <span class="section-number">02</span>
+                    Company Information
+                </h2>
 
-            <p>
-                Unless otherwise agreed in writing, the website design,
-                branding, text, graphics, logos and other materials
-                displayed on this website belong to or are lawfully
-                used by AssureInfo Technologies Pvt. Ltd.
-            </p>
+                <p>
+                    AssureInfo Technologies Private Limited is a
+                    company incorporated under the laws of India
+                    and operates in the technology and professional
+                    services sector.
+                </p>
 
-            <p>
-                No content may be copied, reproduced, modified,
-                distributed or commercially exploited without prior
-                written permission from the relevant rights holder.
-            </p>
+                <p>
+                    The Company provides services relating to
+                    technology consulting, laboratory informatics,
+                    digital transformation, enterprise systems,
+                    software solutions and associated technology
+                    support services.
+                </p>
 
-            <h2>7. Third-Party Products and Services</h2>
+                <p>
+                    The precise scope of services offered may vary
+                    depending on the client's requirements and
+                    the applicable service agreement.
+                </p>
 
-            <p>
-                Our services may involve third-party software, platforms,
-                products or technologies. Such products and services may
-                be subject to their respective licensing terms and
-                conditions.
-            </p>
+            </section>
 
-            <p>
-                Third-party names, trademarks and logos remain the
-                property of their respective owners. Their appearance
-                on our website does not necessarily imply endorsement
-                or affiliation.
-            </p>
 
-            <h2>8. Confidentiality</h2>
+            <!-- 3 -->
 
-            <p>
-                Both parties should take reasonable steps to protect
-                confidential business, technical and project information
-                shared during a service engagement.
-            </p>
+            <section class="legal-section">
 
-            <p>
-                Any specific confidentiality obligations will be governed
-                by the applicable agreement or written arrangement between
-                the Company and the client.
-            </p>
+                <h2>
+                    <span class="section-number">03</span>
+                    Website Access and Acceptable Use
+                </h2>
 
-            <h2>9. Limitation of Liability</h2>
+                <p>
+                    Users may access this website for legitimate
+                    informational, business and service-related
+                    purposes.
+                </p>
 
-            <p>
-                To the extent permitted by applicable law, the Company
-                shall not be responsible for indirect, incidental,
-                special or consequential losses arising from the use
-                of this website.
-            </p>
+                <p>You agree that you shall not:</p>
 
-            <p>
-                Nothing in these Terms is intended to exclude or limit
-                liability that cannot legally be excluded or limited
-                under applicable law.
-            </p>
+                <ul>
 
-            <h2>10. Disclaimer</h2>
+                    <li>
+                        Use this website for unlawful, fraudulent
+                        or misleading activities.
+                    </li>
 
-            <p>
-                Website information is provided on an "as available"
-                basis for general informational purposes. While we
-                make reasonable efforts to maintain accurate information,
-                we do not guarantee that all website content will always
-                be complete, current or error-free.
-            </p>
+                    <li>
+                        Attempt unauthorized access to Company
+                        systems, servers, databases or networks.
+                    </li>
 
-            <h2>11. Privacy</h2>
+                    <li>
+                        Introduce viruses, malware, malicious code
+                        or other harmful software.
+                    </li>
 
-            <p>
-                Your use of this website is also subject to our
-                Privacy Policy, which explains how information may
-                be collected and processed.
-            </p>
+                    <li>
+                        Interfere with website functionality,
+                        security or availability.
+                    </li>
 
-            <p>
-                Please review our
-                <a href="privacy.html">Privacy Policy</a>
-                for further information.
-            </p>
+                    <li>
+                        Copy, scrape, reproduce or commercially
+                        exploit website content without authorization.
+                    </li>
 
-            <h2>12. Suspension or Restriction of Access</h2>
+                    <li>
+                        Impersonate another individual, organization
+                        or business.
+                    </li>
 
-            <p>
-                We reserve the right to restrict or suspend access to
-                our website where necessary to protect our systems,
-                users or business operations, or where misuse or
-                unlawful activity is suspected.
-            </p>
+                    <li>
+                        Use the website in a manner that infringes
+                        intellectual property, privacy or other
+                        legal rights.
+                    </li>
 
-            <h2>13. Changes to These Terms</h2>
+                </ul>
 
-            <p>
-                We may revise these Terms and Conditions from time
-                to time. Updated terms will be published on this page
-                along with the revised date.
-            </p>
+                <p>
+                    The Company reserves the right to restrict access
+                    where reasonably necessary to protect its systems,
+                    users or legitimate business interests.
+                </p>
 
-            <h2>14. Governing Law and Jurisdiction</h2>
+            </section>
 
-            <p>
-                These Terms and Conditions shall be governed by the
-                laws of India. Subject to applicable law, courts
-                having jurisdiction in Bengaluru, Karnataka, shall
-                have jurisdiction over disputes arising from these
-                Terms.
-            </p>
 
-            <h2>15. Contact Information</h2>
+            <!-- 4 -->
 
-            <p>
-                For questions regarding these Terms and Conditions,
-                please contact:
-            </p>
+            <section class="legal-section">
 
-            <p>
-                <strong>AssureInfo Technologies Pvt. Ltd.</strong><br>
-                Email:
-                <a href="mailto:support@assureinfo.com">
-                    support@assureinfo.com
-                </a><br>
-                Phone:
-                <a href="tel:+917598232307">
-                    +91 75982 32307
-                </a><br>
-                Address: No. 104, Srivani Symphony Apartment,
-                Thirupalya, Bommasandra Industrial Estate,
-                Bangalore South, Bangalore, Karnataka – 560099.
-            </p>
+                <h2>
+                    <span class="section-number">04</span>
+                    Services and Professional Engagements
+                </h2>
+
+                <p>
+                    Information published on this website is intended
+                    to describe the Company's services and capabilities.
+                    It does not constitute a binding offer to provide
+                    any particular service.
+                </p>
+
+                <p>
+                    Actual services shall be provided based on an
+                    accepted quotation, proposal, purchase order,
+                    written confirmation or separate agreement.
+                </p>
+
+                <p>
+                    The relevant engagement document may specify:
+                </p>
+
+                <ul>
+
+                    <li>Scope and description of services.</li>
+
+                    <li>Project deliverables and milestones.</li>
+
+                    <li>Implementation and completion timelines.</li>
+
+                    <li>Professional fees and applicable taxes.</li>
+
+                    <li>Client responsibilities and dependencies.</li>
+
+                    <li>Payment, cancellation and refund conditions.</li>
+
+                    <li>Support, maintenance and warranty conditions.</li>
+
+                </ul>
+
+                <p>
+                    Any work requested outside the agreed scope may
+                    require a separate quotation and written approval.
+                </p>
+
+                <p>
+                    The Company may modify or discontinue its
+                    publicly advertised services, provided that
+                    existing contractual obligations are respected.
+                </p>
+
+            </section>
+
+
+            <!-- 5 -->
+
+            <section class="legal-section">
+
+                <h2>
+                    <span class="section-number">05</span>
+                    Quotations, Fees and Payments
+                </h2>
+
+                <p>
+                    All service fees shall be communicated through
+                    quotations, proposals, invoices or other
+                    mutually accepted written arrangements.
+                </p>
+
+                <ul>
+
+                    <li>
+                        Payments must be made in accordance with
+                        the agreed payment schedule.
+                    </li>
+
+                    <li>
+                        Applicable GST and other statutory taxes
+                        shall be charged as required under Indian law.
+                    </li>
+
+                    <li>
+                        Any additional services, modifications
+                        or work outside the agreed scope may attract
+                        additional charges.
+                    </li>
+
+                    <li>
+                        The Company may require advance payment
+                        before commencing a project or allocating
+                        resources.
+                    </li>
+
+                    <li>
+                        Delayed payments may result in suspension
+                        of non-essential services after reasonable
+                        notice, subject to the applicable agreement
+                        and law.
+                    </li>
+
+                    <li>
+                        Applicable interest or late-payment charges
+                        shall only be imposed where lawfully agreed
+                        and permitted.
+                    </li>
+
+                </ul>
+
+                <p>
+                    Payment obligations shall be considered fulfilled
+                    only when the relevant payment has been successfully
+                    received and confirmed by the Company's designated
+                    payment channel.
+                </p>
+
+                <p>
+                    The Company shall not be responsible for delays
+                    caused by banks, payment gateways, financial
+                    institutions or other payment intermediaries,
+                    except to the extent caused by the Company's
+                    own breach or negligence.
+                </p>
+
+            </section>
+
+
+            <!-- 6 -->
+
+            <section class="legal-section">
+
+                <h2>
+                    <span class="section-number">06</span>
+                    Refunds, Cancellations and Termination
+                </h2>
+
+                <p>
+                    Refund eligibility shall depend on the nature
+                    of the service, work completed, third-party
+                    expenses incurred and the cancellation terms
+                    agreed between the Company and the client.
+                </p>
+
+                <ul>
+
+                    <li>
+                        Clients should submit cancellation requests
+                        through the Company's official communication
+                        channels.
+                    </li>
+
+                    <li>
+                        Charges for services already performed,
+                        resources allocated and approved third-party
+                        expenses may be considered when determining
+                        the refundable amount, subject to applicable law.
+                    </li>
+
+                    <li>
+                        Refunds, where approved, shall ordinarily
+                        be processed through the original payment
+                        method or another mutually accepted method.
+                    </li>
+
+                    <li>
+                        The applicable refund timeline shall be
+                        communicated to the client.
+                    </li>
+
+                </ul>
+
+                <p>
+                    Either party may terminate an engagement in
+                    accordance with the termination provisions
+                    of the applicable service agreement.
+                </p>
+
+                <p>
+                    Termination shall not automatically cancel
+                    payment obligations already accrued for
+                    services properly provided.
+                </p>
+
+                <p>
+                    Nothing in this section shall restrict any
+                    mandatory refund, cancellation or consumer
+                    protection rights available under applicable law.
+                </p>
+
+            </section>
+
+
+            <!-- 7 -->
+
+            <section class="legal-section">
+
+                <h2>
+                    <span class="section-number">07</span>
+                    Client Responsibilities
+                </h2>
+
+                <p>
+                    Clients are responsible for providing the
+                    information, documents, approvals and cooperation
+                    reasonably necessary for the performance of
+                    the agreed services.
+                </p>
+
+                <p>Clients agree to:</p>
+
+                <ul>
+
+                    <li>
+                        Provide accurate, complete and lawful
+                        information.
+                    </li>
+
+                    <li>
+                        Ensure that they have the authority to
+                        provide documents, data and materials
+                        shared with the Company.
+                    </li>
+
+                    <li>
+                        Obtain necessary permissions, approvals
+                        and internal authorizations.
+                    </li>
+
+                    <li>
+                        Review and approve deliverables within
+                        agreed timelines.
+                    </li>
+
+                    <li>
+                        Maintain appropriate backups of their
+                        own important business information.
+                    </li>
+
+                    <li>
+                        Avoid providing confidential information
+                        belonging to third parties without
+                        appropriate authorization.
+                    </li>
+
+                </ul>
+
+                <p>
+                    The Company shall not be responsible for delays
+                    or errors directly resulting from inaccurate,
+                    incomplete or delayed information supplied
+                    by the client, except to the extent caused
+                    by the Company's own failure to exercise
+                    reasonable care.
+                </p>
+
+            </section>
+
+
+            <!-- 8 -->
+
+            <section class="legal-section">
+
+                <h2>
+                    <span class="section-number">08</span>
+                    Intellectual Property Rights
+                </h2>
+
+                <p>
+                    All intellectual property rights in the Company's
+                    website, branding, logos, visual elements, text,
+                    graphics, software, designs, methodologies
+                    and proprietary materials shall remain with
+                    the Company or their respective lawful owners.
+                </p>
+
+                <p>
+                    Unless expressly authorized in writing,
+                    users shall not:
+                </p>
+
+                <ul>
+
+                    <li>Reproduce or distribute Company materials.</li>
+
+                    <li>Modify or commercially exploit proprietary content.</li>
+
+                    <li>Reverse engineer proprietary software.</li>
+
+                    <li>Use Company trademarks without permission.</li>
+
+                    <li>Remove copyright or ownership notices.</li>
+
+                </ul>
+
+                <p>
+                    Ownership and permitted use of project-specific
+                    deliverables, software, source code and other
+                    materials shall be determined by the relevant
+                    written agreement.
+                </p>
+
+                <p>
+                    No intellectual property ownership shall transfer
+                    to a client merely because a service fee has
+                    been paid, unless such transfer is expressly
+                    agreed in writing.
+                </p>
+
+            </section>
+
+
+            <!-- 9 -->
+
+            <section class="legal-section">
+
+                <h2>
+                    <span class="section-number">09</span>
+                    Confidentiality
+                </h2>
+
+                <p>
+                    During a business engagement, either party
+                    may receive confidential commercial, technical,
+                    financial or operational information belonging
+                    to the other party.
+                </p>
+
+                <p>
+                    Each party agrees to take reasonable measures
+                    to protect such confidential information and
+                    use it only for the purposes of the relevant
+                    business engagement.
+                </p>
+
+                <p>
+                    Confidentiality obligations shall not apply
+                    to information that:
+                </p>
+
+                <ul>
+
+                    <li>
+                        Is publicly available without breach of
+                        a confidentiality obligation.
+                    </li>
+
+                    <li>
+                        Was lawfully known before disclosure.
+                    </li>
+
+                    <li>
+                        Is independently developed without using
+                        confidential information.
+                    </li>
+
+                    <li>
+                        Is lawfully received from an authorized
+                        third party.
+                    </li>
+
+                    <li>
+                        Must be disclosed under applicable law
+                        or a valid order of a competent authority.
+                    </li>
+
+                </ul>
+
+                <p>
+                    Where reasonably practicable and legally
+                    permitted, the receiving party shall provide
+                    prior notice before making a legally required
+                    disclosure.
+                </p>
+
+            </section>
+
+
+            <!-- 10 -->
+
+            <section class="legal-section">
+
+                <h2>
+                    <span class="section-number">10</span>
+                    Data Protection and Privacy
+                </h2>
+
+                <p>
+                    The Company respects the privacy of website
+                    visitors, clients, employees and business
+                    partners.
+                </p>
+
+                <p>
+                    Personal information may be collected and
+                    processed where necessary for legitimate
+                    business purposes, service delivery,
+                    communication, security and compliance
+                    with applicable legal obligations.
+                </p>
+
+                <p>
+                    The Company shall handle personal data
+                    in accordance with applicable Indian
+                    data protection and information technology
+                    laws, including the Information Technology
+                    Act, 2000 and the Digital Personal Data
+                    Protection Act, 2023, to the extent their
+                    respective provisions are in force and applicable.
+                </p>
+
+                <p>
+                    Where applicable, the Company shall implement
+                    appropriate safeguards and follow relevant
+                    requirements concerning data access,
+                    confidentiality, security and lawful processing.
+                </p>
+
+                <p>
+                    Clients shall ensure that they have the
+                    necessary legal authority, permissions
+                    or other valid basis to provide personal
+                    data to the Company for the agreed services.
+                </p>
+
+                <p>
+                    Further details regarding information
+                    collection, processing, storage and
+                    protection are available in our
+                    <a href="privacy.html">Privacy Policy</a>.
+                </p>
+
+            </section>
+
+
+            <!-- 11 -->
+
+            <section class="legal-section">
+
+                <h2>
+                    <span class="section-number">11</span>
+                    Third-Party Services and Technologies
+                </h2>
+
+                <p>
+                    Certain Company services may involve
+                    third-party software, cloud infrastructure,
+                    APIs, hosting providers, payment gateways,
+                    software platforms or external technologies.
+                </p>
+
+                <p>
+                    Such third-party services may be governed
+                    by separate licensing agreements, terms
+                    of service and privacy policies.
+                </p>
+
+                <p>
+                    The Company does not own or control independent
+                    third-party platforms and cannot guarantee
+                    their uninterrupted availability, security
+                    or performance.
+                </p>
+
+                <p>
+                    The Company shall not be responsible for
+                    independent acts, omissions, service
+                    interruptions or policy changes of third-party
+                    providers, except to the extent responsibility
+                    arises under applicable law or from the
+                    Company's own breach of its obligations.
+                </p>
+
+                <p>
+                    All third-party trademarks, logos and
+                    product names remain the property of
+                    their respective owners.
+                </p>
+
+            </section>
+
+
+            <!-- 12 -->
+
+            <section class="legal-section">
+
+                <h2>
+                    <span class="section-number">12</span>
+                    Technology, Software and Service Availability
+                </h2>
+
+                <p>
+                    The Company makes reasonable efforts to
+                    maintain the availability, functionality
+                    and security of its website and technology
+                    services.
+                </p>
+
+                <p>
+                    However, uninterrupted operation cannot
+                    be guaranteed due to maintenance,
+                    infrastructure limitations, internet
+                    connectivity, cyber incidents or
+                    circumstances outside the Company's
+                    reasonable control.
+                </p>
+
+                <p>
+                    Software implementation and technology
+                    projects may depend on client infrastructure,
+                    third-party integrations, licensing,
+                    hardware and other external dependencies.
+                </p>
+
+                <p>
+                    Any specific uptime commitments, service
+                    levels, maintenance obligations or
+                    warranties must be expressly stated
+                    in the relevant written agreement.
+                </p>
+
+            </section>
+
+
+            <!-- 13 -->
+
+            <section class="legal-section">
+
+                <h2>
+                    <span class="section-number">13</span>
+                    Disclaimers and Professional Limitations
+                </h2>
+
+                <p>
+                    Website content is provided for general
+                    informational purposes and should not
+                    be treated as a substitute for specific
+                    professional advice.
+                </p>
+
+                <p>
+                    Unless expressly agreed under a separate
+                    engagement, information provided through
+                    the website does not constitute legal,
+                    financial, medical, regulatory or
+                    certification advice.
+                </p>
+
+                <p>
+                    The Company does not guarantee that
+                    information published on the website
+                    will always be complete, accurate,
+                    uninterrupted or free from errors.
+                </p>
+
+                <p>
+                    Clients remain responsible for evaluating
+                    business, regulatory and operational
+                    decisions based on their individual
+                    circumstances and obtaining independent
+                    professional advice wherever required.
+                </p>
+
+            </section>
+
+
+            <!-- 14 -->
+
+            <section class="legal-section">
+
+                <h2>
+                    <span class="section-number">14</span>
+                    Limitation of Liability
+                </h2>
+
+                <p>
+                    To the maximum extent permitted by
+                    applicable law, the Company shall
+                    not be liable for indirect, incidental,
+                    special or consequential losses,
+                    including loss of anticipated profits,
+                    business opportunities or goodwill,
+                    arising from the use of this website
+                    or services.
+                </p>
+
+                <p>
+                    Where legally permissible and unless
+                    otherwise agreed in writing, the
+                    Company's aggregate liability arising
+                    from a particular service engagement
+                    shall not exceed the fees actually
+                    paid or payable to the Company for
+                    that specific engagement during
+                    the twelve months preceding the
+                    event giving rise to the claim.
+                </p>
+
+                <p>
+                    This limitation shall not apply
+                    where such limitation is prohibited
+                    by applicable law.
+                </p>
+
+                <div class="legal-notice">
+
+                    <strong>Important Legal Protection</strong>
+
+                    Nothing in these Terms shall exclude
+                    or limit liability for fraud, wilful
+                    misconduct, gross negligence where
+                    legally non-excludable, or any other
+                    liability that cannot lawfully be
+                    excluded or restricted under Indian law.
+                    
+                </div>
+
+            </section>
+
+
+            <!-- 15 -->
+
+            <section class="legal-section">
+
+                <h2>
+                    <span class="section-number">15</span>
+                    Indemnification
+                </h2>
+
+                <p>
+                    To the extent permitted by applicable law,
+                    the client agrees to indemnify and hold
+                    the Company, its directors, employees
+                    and authorized representatives harmless
+                    against third-party claims, losses,
+                    liabilities and reasonable legal expenses
+                    arising directly from:
+                </p>
+
+                <ul>
+
+                    <li>
+                        Unlawful or unauthorized materials
+                        supplied by the client.
+                    </li>
+
+                    <li>
+                        The client's infringement of
+                        third-party intellectual property rights.
+                    </li>
+
+                    <li>
+                        Fraudulent or unlawful activities
+                        conducted by the client.
+                    </li>
+
+                    <li>
+                        Material breach of the client's
+                        contractual obligations.
+                    </li>
+
+                </ul>
+
+                <p>
+                    This provision shall not apply to the
+                    extent that a claim arises from the
+                    Company's own negligence, misconduct
+                    or breach of applicable law.
+                </p>
+
+            </section>
+
+
+            <!-- 16 -->
+
+            <section class="legal-section">
+
+                <h2>
+                    <span class="section-number">16</span>
+                    Force Majeure
+                </h2>
+
+                <p>
+                    Neither party shall be considered in
+                    breach of its contractual obligations
+                    to the extent that performance is
+                    prevented or materially delayed by
+                    circumstances beyond its reasonable
+                    control.
+                </p>
+
+                <p>
+                    Such circumstances may include:
+                </p>
+
+                <ul>
+
+                    <li>Natural disasters and severe weather events.</li>
+
+                    <li>War, terrorism and civil disturbances.</li>
+
+                    <li>Government restrictions or regulatory actions.</li>
+
+                    <li>Major internet or telecommunications failures.</li>
+
+                    <li>Widespread cyber incidents.</li>
+
+                    <li>Power outages and infrastructure disruptions.</li>
+
+                    <li>Other events beyond reasonable control.</li>
+
+                </ul>
+
+                <p>
+                    The affected party shall make reasonable
+                    efforts to notify the other party and
+                    minimize the consequences.
+                </p>
+
+            </section>
+
+
+            <!-- 17 -->
+
+            <section class="legal-section">
+
+                <h2>
+                    <span class="section-number">17</span>
+                    Suspension and Termination of Access
+                </h2>
+
+                <p>
+                    The Company may suspend or restrict access
+                    to its website, systems or services where
+                    reasonably necessary due to:
+                </p>
+
+                <ul>
+
+                    <li>Security threats or unauthorized access.</li>
+
+                    <li>Suspected fraudulent or unlawful activity.</li>
+
+                    <li>Material breach of applicable Terms.</li>
+
+                    <li>Legal or regulatory requirements.</li>
+
+                    <li>Non-payment of amounts lawfully due.</li>
+
+                </ul>
+
+                <p>
+                    Wherever reasonably practicable, notice
+                    shall be provided before suspension,
+                    except where immediate action is
+                    necessary for security, legal compliance
+                    or protection of legitimate interests.
+                </p>
+
+            </section>
+
+
+            <!-- 18 -->
+
+            <section class="legal-section">
+
+                <h2>
+                    <span class="section-number">18</span>
+                    Electronic Communications
+                </h2>
+
+                <p>
+                    The Company may communicate with clients
+                    through email, telephone, messaging
+                    platforms and other electronic means
+                    for legitimate business purposes.
+                </p>
+
+                <p>
+                    Electronic records, communications,
+                    approvals and signatures may be used
+                    to the extent recognized under
+                    applicable Indian law.
+                </p>
+
+                <p>
+                    Clients should ensure that their
+                    registered contact information
+                    remains accurate and accessible.
+                </p>
+
+            </section>
+
+
+            <!-- 19 -->
+
+            <section class="legal-section">
+
+                <h2>
+                    <span class="section-number">19</span>
+                    Consumer Rights and Applicable Laws
+                </h2>
+
+                <p>
+                    These Terms shall be interpreted
+                    consistently with applicable Indian
+                    laws, including the Consumer Protection
+                    Act, 2019 and other relevant legislation.
+                </p>
+
+                <p>
+                    Nothing in these Terms is intended
+                    to waive, restrict or remove any
+                    statutory rights that cannot legally
+                    be waived or restricted.
+                </p>
+
+                <p>
+                    Where any provision of these Terms
+                    conflicts with a mandatory statutory
+                    requirement, the applicable statutory
+                    requirement shall prevail to the
+                    extent of such conflict.
+                </p>
+
+            </section>
+
+
+            <!-- 20 -->
+
+            <section class="legal-section">
+
+                <h2>
+                    <span class="section-number">20</span>
+                    Dispute Resolution and Arbitration
+                </h2>
+
+                <p>
+                    The parties shall first attempt to
+                    resolve any dispute arising from
+                    these Terms or a service engagement
+                    through good-faith discussions
+                    and written communication.
+                </p>
+
+                <p>
+                    Where a dispute cannot be resolved
+                    amicably, the parties may mutually
+                    agree to refer the dispute to
+                    arbitration in accordance with
+                    the Arbitration and Conciliation
+                    Act, 1996, as amended.
+                </p>
+
+                <p>
+                    The arbitration agreement, where
+                    applicable, shall be separately
+                    established through written
+                    agreement between the parties.
+                </p>
+
+                <p>
+                    The rights of consumers and the
+                    jurisdiction of statutory authorities
+                    and courts under applicable law
+                    shall remain unaffected.
+                </p>
+
+            </section>
+
+
+            <!-- 21 -->
+
+            <section class="legal-section">
+
+                <h2>
+                    <span class="section-number">21</span>
+                    Governing Law and Jurisdiction
+                </h2>
+
+                <p>
+                    These Terms and Conditions shall
+                    be governed by and interpreted
+                    in accordance with the laws of India.
+                </p>
+
+                <p>
+                    Subject to applicable statutory
+                    jurisdiction, disputes arising
+                    from these Terms shall be subject
+                    to the jurisdiction of the competent
+                    courts at Bengaluru, Karnataka.
+                </p>
+
+                <p>
+                    Nothing in this provision shall
+                    exclude the jurisdiction of any
+                    court, consumer commission or
+                    statutory authority that has
+                    jurisdiction under applicable law.
+                </p>
+
+            </section>
+
+
+            <!-- 22 -->
+
+            <section class="legal-section">
+
+                <h2>
+                    <span class="section-number">22</span>
+                    Severability
+                </h2>
+
+                <p>
+                    If any provision of these Terms
+                    is determined to be invalid,
+                    unlawful or unenforceable by
+                    a competent authority, such
+                    provision shall be modified
+                    or limited to the minimum extent
+                    necessary.
+                </p>
+
+                <p>
+                    The remaining provisions shall
+                    continue to remain effective
+                    to the extent permitted by law.
+                </p>
+
+            </section>
+
+
+            <!-- 23 -->
+
+            <section class="legal-section">
+
+                <h2>
+                    <span class="section-number">23</span>
+                    Amendments and Updates
+                </h2>
+
+                <p>
+                    The Company reserves the right
+                    to revise or update these Terms
+                    from time to time to reflect
+                    changes in its services,
+                    business operations or applicable
+                    legal requirements.
+                </p>
+
+                <p>
+                    Updated Terms shall be published
+                    on this page with a revised
+                    effective or updated date.
+                </p>
+
+                <p>
+                    Changes to an existing service
+                    agreement shall be governed by
+                    the amendment provisions of
+                    that agreement and applicable law.
+                </p>
+
+            </section>
+
+
+            <!-- 24 -->
+
+            <section class="legal-section">
+
+                <h2>
+                    <span class="section-number">24</span>
+                    Entire Agreement
+                </h2>
+
+                <p>
+                    These Terms, together with the
+                    applicable Privacy Policy and
+                    any separately executed service
+                    agreement, constitute the
+                    relevant contractual framework
+                    governing the relationship
+                    between the parties.
+                </p>
+
+                <p>
+                    Any amendment, waiver or
+                    modification of a specific
+                    service agreement shall be
+                    effective only in accordance
+                    with its applicable terms.
+                </p>
+
+            </section>
+
+
+            <!-- 25 -->
+
+            <section class="legal-section">
+
+                <h2>
+                    <span class="section-number">25</span>
+                    Contact Information
+                </h2>
+
+                <p>
+                    For questions, clarification
+                    or concerns regarding these
+                    Terms and Conditions, please
+                    contact the Company through
+                    the following official channels:
+                </p>
+
+                <div class="legal-contact">
+
+                    <p>
+                        <strong>
+                            AssureInfo Technologies Private Limited
+                        </strong>
+                    </p>
+
+                    <p>
+                        Email:
+                        <a href="mailto:support@assureinfo.com">
+                            support@assureinfo.com
+                        </a>
+                    </p>
+
+                    <p>
+                        Phone:
+                        <a href="tel:+917598232307">
+                            +91 75982 32307
+                        </a>
+                    </p>
+
+                    <p>
+                        Registered / Business Address:
+                        <br>
+                        No. 104, Srivani Symphony Apartment,
+                        Thirupalya, Bommasandra Industrial Estate,
+                        Bangalore South, Bangalore,
+                        Karnataka – 560099.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <div class="legal-footnote">
+
+                © 2026 AssureInfo Technologies Private Limited.
+                All Rights Reserved.
+
+                <br>
+
+                These Terms and Conditions are subject to
+                applicable laws of India.
+
+            </div>
+
 
         </div>
+
     </main>
+
 
     <site-footer></site-footer>
 
