@@ -6,19 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta name="description" content="Terms and Conditions governing the use of the website and services of AssureInfo Technologies Private Limited.">
-
     <meta name="robots" content="index, follow">
-
-    <meta name="theme-color" content="#071a3d">
+    <meta name="theme-color" content="#102d61">
 
     <title>Terms & Conditions | AssureInfo Technologies Pvt. Ltd.</title>
 
     <link rel="icon" type="image/png" href="logo.png">
 
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="css/nav.css">
 
     <style>
+
+        /* =====================================
+           BRAND COLOURS
+        ===================================== */
+
+        :root {
+            --navy-lighter: #102d61;
+            --navy-text: #12316b;
+            --gold: #d99a12;
+            --gold-hover: #f0b52d;
+        }
 
         /* =====================================
            LEGAL PAGE
@@ -26,9 +34,9 @@
 
         .legal-page {
             max-width: 1150px;
-            margin: auto;
+            margin: 0 auto;
             padding: 150px 25px 85px;
-            color: inherit;
+            color: var(--navy-text);
             line-height: 1.85;
         }
 
@@ -41,7 +49,7 @@
 
         .legal-label {
             display: inline-block;
-            padding: 7px 18px;
+            padding: 7px 19px;
             margin-bottom: 18px;
 
             font-size: 0.75rem;
@@ -49,14 +57,15 @@
             letter-spacing: 2px;
             text-transform: uppercase;
 
-            color: #e1bd70;
-            background: rgba(214,173,85,0.10);
+            color: var(--gold);
+            background: rgba(217,154,18,0.10);
 
-            border: 1px solid rgba(214,173,85,0.25);
+            border: 1px solid rgba(217,154,18,0.25);
             border-radius: 30px;
         }
 
         .legal-header h1 {
+            color: var(--navy-lighter);
             font-size: clamp(2.2rem, 5vw, 3.5rem);
             font-weight: 800;
             letter-spacing: -1px;
@@ -64,14 +73,15 @@
         }
 
         .legal-header p {
+            color: var(--navy-text);
             opacity: 0.7;
             font-size: 0.9rem;
         }
 
         .legal-divider {
             width: 75px;
-            height: 3px;
-            background: #d6ad55;
+            height: 4px;
+            background: var(--gold);
             margin: 22px auto 0;
             border-radius: 5px;
         }
@@ -79,13 +89,13 @@
         /* MAIN CONTENT */
 
         .legal-content {
-            background: rgba(255,255,255,0.035);
-            border: 1px solid rgba(255,255,255,0.10);
+            background: #ffffff;
+            border: 1px solid rgba(16,45,97,0.12);
             border-radius: 18px;
 
             padding: clamp(22px, 5vw, 55px);
 
-            box-shadow: 0 15px 50px rgba(0,0,0,0.12);
+            box-shadow: 0 15px 50px rgba(16,45,97,0.07);
         }
 
         /* INTRODUCTION */
@@ -94,13 +104,14 @@
             padding: 22px 25px;
             margin-bottom: 35px;
 
-            background: rgba(214,173,85,0.07);
-            border-left: 4px solid #d6ad55;
+            background: rgba(217,154,18,0.07);
+            border-left: 4px solid var(--gold);
 
             border-radius: 5px 12px 12px 5px;
         }
 
         .legal-intro p {
+            color: var(--navy-text);
             margin: 0;
         }
 
@@ -110,7 +121,7 @@
             margin-top: 35px;
             padding-bottom: 25px;
 
-            border-bottom: 1px solid rgba(255,255,255,0.08);
+            border-bottom: 1px solid rgba(16,45,97,0.10);
         }
 
         .legal-section:last-child {
@@ -119,8 +130,10 @@
         }
 
         .legal-content h2 {
+            color: var(--navy-lighter);
+
             font-size: clamp(1.1rem, 2vw, 1.35rem);
-            font-weight: 700;
+            font-weight: 750;
 
             margin: 0 0 16px;
 
@@ -130,26 +143,36 @@
         }
 
         .section-number {
-            min-width: 34px;
-            height: 34px;
+            min-width: 36px;
+            height: 36px;
 
             display: inline-flex;
             align-items: center;
             justify-content: center;
 
-            color: #e3bd70;
-            background: rgba(214,173,85,0.12);
+            color: #ffffff;
+            background: var(--navy-lighter);
 
-            border: 1px solid rgba(214,173,85,0.2);
+            border: 1px solid var(--navy-lighter);
             border-radius: 9px;
 
             font-size: 0.85rem;
+            font-weight: 700;
+
+            transition: background 0.25s ease;
+        }
+
+        .legal-section:hover .section-number {
+            background: var(--gold);
+            border-color: var(--gold);
+            color: #ffffff;
         }
 
         .legal-content p {
+            color: var(--navy-text);
             margin-bottom: 14px;
             font-size: 0.96rem;
-            opacity: 0.91;
+            opacity: 0.92;
         }
 
         .legal-content ul {
@@ -158,23 +181,28 @@
         }
 
         .legal-content li {
+            color: var(--navy-text);
             margin-bottom: 10px;
             padding-left: 5px;
             font-size: 0.95rem;
-            opacity: 0.9;
+            opacity: 0.92;
         }
 
         .legal-content li::marker {
-            color: #d6ad55;
+            color: var(--gold);
         }
 
+        /* LINKS */
+
         .legal-content a {
-            color: #e3bd70;
+            color: var(--gold);
             text-decoration: none;
-            font-weight: 600;
+            font-weight: 700;
+            transition: color 0.2s ease;
         }
 
         .legal-content a:hover {
+            color: var(--gold-hover);
             text-decoration: underline;
         }
 
@@ -184,16 +212,20 @@
             padding: 20px 23px;
             margin: 22px 0;
 
-            background: rgba(255,255,255,0.045);
-            border: 1px solid rgba(255,255,255,0.10);
+            background: rgba(217,154,18,0.07);
+            border: 1px solid rgba(217,154,18,0.25);
 
             border-radius: 12px;
         }
 
         .legal-notice strong {
-            color: #e3bd70;
+            color: var(--navy-lighter);
             display: block;
             margin-bottom: 8px;
+        }
+
+        .legal-notice {
+            color: var(--navy-text);
         }
 
         /* CONTACT */
@@ -201,14 +233,15 @@
         .legal-contact {
             padding: 25px;
 
-            background: rgba(214,173,85,0.07);
-            border: 1px solid rgba(214,173,85,0.18);
+            background: rgba(16,45,97,0.045);
+            border: 1px solid rgba(16,45,97,0.12);
 
-            border-radius: 13px;
+            border-left: 4px solid var(--gold);
+            border-radius: 5px 13px 13px 5px;
         }
 
         .legal-contact strong {
-            color: #e3bd70;
+            color: var(--navy-lighter);
         }
 
         .legal-contact p {
@@ -221,8 +254,16 @@
             text-align: center;
             margin-top: 35px;
 
+            color: var(--navy-text);
             font-size: 0.82rem;
-            opacity: 0.6;
+            opacity: 0.65;
+        }
+
+        /* SELECTION */
+
+        .legal-page ::selection {
+            background: var(--gold);
+            color: #ffffff;
         }
 
         /* RESPONSIVE */
@@ -252,6 +293,40 @@
 
             .legal-intro {
                 padding: 18px;
+            }
+
+        }
+
+        @media(max-width: 480px) {
+
+            .legal-page {
+                padding-left: 12px;
+                padding-right: 12px;
+            }
+
+            .legal-content {
+                padding: 20px 15px;
+            }
+
+            .legal-content p,
+            .legal-content li {
+                font-size: 0.91rem;
+            }
+
+            .legal-content h2 {
+                font-size: 1.08rem;
+                gap: 9px;
+            }
+
+            .section-number {
+                min-width: 31px;
+                height: 31px;
+                font-size: 0.78rem;
+            }
+
+            .legal-contact {
+                padding: 18px;
+                overflow-wrap: anywhere;
             }
 
         }
@@ -289,25 +364,19 @@
             <div class="legal-intro">
 
                 <p>
-                    These Terms and Conditions constitute a legally
-                    relevant agreement governing access to and use
-                    of the website, products and services offered
+                    These Terms and Conditions govern access to and
+                    use of the website, products and services offered
                     by AssureInfo Technologies Private Limited.
-                    Please read these terms carefully before using
+                    Please read these Terms carefully before using
                     our website or engaging our services.
                 </p>
 
             </div>
 
 
-            <!-- 1 -->
-
             <section class="legal-section">
 
-                <h2>
-                    <span class="section-number">01</span>
-                    Introduction and Acceptance
-                </h2>
+                <h2><span class="section-number">01</span> Introduction and Acceptance</h2>
 
                 <p>
                     Welcome to AssureInfo Technologies Private Limited
@@ -345,14 +414,9 @@
             </section>
 
 
-            <!-- 2 -->
-
             <section class="legal-section">
 
-                <h2>
-                    <span class="section-number">02</span>
-                    Company Information
-                </h2>
+                <h2><span class="section-number">02</span> Company Information</h2>
 
                 <p>
                     AssureInfo Technologies Private Limited is a
@@ -378,14 +442,9 @@
             </section>
 
 
-            <!-- 3 -->
-
             <section class="legal-section">
 
-                <h2>
-                    <span class="section-number">03</span>
-                    Website Access and Acceptable Use
-                </h2>
+                <h2><span class="section-number">03</span> Website Access and Acceptable Use</h2>
 
                 <p>
                     Users may access this website for legitimate
@@ -396,43 +455,13 @@
                 <p>You agree that you shall not:</p>
 
                 <ul>
-
-                    <li>
-                        Use this website for unlawful, fraudulent
-                        or misleading activities.
-                    </li>
-
-                    <li>
-                        Attempt unauthorized access to Company
-                        systems, servers, databases or networks.
-                    </li>
-
-                    <li>
-                        Introduce viruses, malware, malicious code
-                        or other harmful software.
-                    </li>
-
-                    <li>
-                        Interfere with website functionality,
-                        security or availability.
-                    </li>
-
-                    <li>
-                        Copy, scrape, reproduce or commercially
-                        exploit website content without authorization.
-                    </li>
-
-                    <li>
-                        Impersonate another individual, organization
-                        or business.
-                    </li>
-
-                    <li>
-                        Use the website in a manner that infringes
-                        intellectual property, privacy or other
-                        legal rights.
-                    </li>
-
+                    <li>Use this website for unlawful, fraudulent or misleading activities.</li>
+                    <li>Attempt unauthorized access to Company systems, servers, databases or networks.</li>
+                    <li>Introduce viruses, malware, malicious code or other harmful software.</li>
+                    <li>Interfere with website functionality, security or availability.</li>
+                    <li>Copy, scrape, reproduce or commercially exploit website content without authorization.</li>
+                    <li>Impersonate another individual, organization or business.</li>
+                    <li>Use the website in a manner that infringes intellectual property, privacy or other legal rights.</li>
                 </ul>
 
                 <p>
@@ -444,14 +473,9 @@
             </section>
 
 
-            <!-- 4 -->
-
             <section class="legal-section">
 
-                <h2>
-                    <span class="section-number">04</span>
-                    Services and Professional Engagements
-                </h2>
+                <h2><span class="section-number">04</span> Services and Professional Engagements</h2>
 
                 <p>
                     Information published on this website is intended
@@ -466,26 +490,16 @@
                     written confirmation or separate agreement.
                 </p>
 
-                <p>
-                    The relevant engagement document may specify:
-                </p>
+                <p>The relevant engagement document may specify:</p>
 
                 <ul>
-
                     <li>Scope and description of services.</li>
-
                     <li>Project deliverables and milestones.</li>
-
                     <li>Implementation and completion timelines.</li>
-
                     <li>Professional fees and applicable taxes.</li>
-
                     <li>Client responsibilities and dependencies.</li>
-
                     <li>Payment, cancellation and refund conditions.</li>
-
                     <li>Support, maintenance and warranty conditions.</li>
-
                 </ul>
 
                 <p>
@@ -502,14 +516,9 @@
             </section>
 
 
-            <!-- 5 -->
-
             <section class="legal-section">
 
-                <h2>
-                    <span class="section-number">05</span>
-                    Quotations, Fees and Payments
-                </h2>
+                <h2><span class="section-number">05</span> Quotations, Fees and Payments</h2>
 
                 <p>
                     All service fees shall be communicated through
@@ -518,42 +527,12 @@
                 </p>
 
                 <ul>
-
-                    <li>
-                        Payments must be made in accordance with
-                        the agreed payment schedule.
-                    </li>
-
-                    <li>
-                        Applicable GST and other statutory taxes
-                        shall be charged as required under Indian law.
-                    </li>
-
-                    <li>
-                        Any additional services, modifications
-                        or work outside the agreed scope may attract
-                        additional charges.
-                    </li>
-
-                    <li>
-                        The Company may require advance payment
-                        before commencing a project or allocating
-                        resources.
-                    </li>
-
-                    <li>
-                        Delayed payments may result in suspension
-                        of non-essential services after reasonable
-                        notice, subject to the applicable agreement
-                        and law.
-                    </li>
-
-                    <li>
-                        Applicable interest or late-payment charges
-                        shall only be imposed where lawfully agreed
-                        and permitted.
-                    </li>
-
+                    <li>Payments must be made in accordance with the agreed payment schedule.</li>
+                    <li>Applicable GST and other statutory taxes shall be charged as required under Indian law.</li>
+                    <li>Additional services or work outside the agreed scope may attract additional charges.</li>
+                    <li>The Company may require advance payment before commencing a project or allocating resources.</li>
+                    <li>Delayed payments may result in suspension of non-essential services after reasonable notice, subject to the applicable agreement and law.</li>
+                    <li>Applicable interest or late-payment charges shall only be imposed where lawfully agreed and permitted.</li>
                 </ul>
 
                 <p>
@@ -574,14 +553,9 @@
             </section>
 
 
-            <!-- 6 -->
-
             <section class="legal-section">
 
-                <h2>
-                    <span class="section-number">06</span>
-                    Refunds, Cancellations and Termination
-                </h2>
+                <h2><span class="section-number">06</span> Refunds, Cancellations and Termination</h2>
 
                 <p>
                     Refund eligibility shall depend on the nature
@@ -591,31 +565,10 @@
                 </p>
 
                 <ul>
-
-                    <li>
-                        Clients should submit cancellation requests
-                        through the Company's official communication
-                        channels.
-                    </li>
-
-                    <li>
-                        Charges for services already performed,
-                        resources allocated and approved third-party
-                        expenses may be considered when determining
-                        the refundable amount, subject to applicable law.
-                    </li>
-
-                    <li>
-                        Refunds, where approved, shall ordinarily
-                        be processed through the original payment
-                        method or another mutually accepted method.
-                    </li>
-
-                    <li>
-                        The applicable refund timeline shall be
-                        communicated to the client.
-                    </li>
-
+                    <li>Clients should submit cancellation requests through the Company's official communication channels.</li>
+                    <li>Charges for services already performed, resources allocated and approved third-party expenses may be considered when determining the refundable amount, subject to applicable law.</li>
+                    <li>Refunds, where approved, shall ordinarily be processed through the original payment method or another mutually accepted method.</li>
+                    <li>The applicable refund timeline shall be communicated to the client.</li>
                 </ul>
 
                 <p>
@@ -639,14 +592,9 @@
             </section>
 
 
-            <!-- 7 -->
-
             <section class="legal-section">
 
-                <h2>
-                    <span class="section-number">07</span>
-                    Client Responsibilities
-                </h2>
+                <h2><span class="section-number">07</span> Client Responsibilities</h2>
 
                 <p>
                     Clients are responsible for providing the
@@ -658,39 +606,12 @@
                 <p>Clients agree to:</p>
 
                 <ul>
-
-                    <li>
-                        Provide accurate, complete and lawful
-                        information.
-                    </li>
-
-                    <li>
-                        Ensure that they have the authority to
-                        provide documents, data and materials
-                        shared with the Company.
-                    </li>
-
-                    <li>
-                        Obtain necessary permissions, approvals
-                        and internal authorizations.
-                    </li>
-
-                    <li>
-                        Review and approve deliverables within
-                        agreed timelines.
-                    </li>
-
-                    <li>
-                        Maintain appropriate backups of their
-                        own important business information.
-                    </li>
-
-                    <li>
-                        Avoid providing confidential information
-                        belonging to third parties without
-                        appropriate authorization.
-                    </li>
-
+                    <li>Provide accurate, complete and lawful information.</li>
+                    <li>Ensure that they have the authority to provide documents, data and materials shared with the Company.</li>
+                    <li>Obtain necessary permissions, approvals and internal authorizations.</li>
+                    <li>Review and approve deliverables within agreed timelines.</li>
+                    <li>Maintain appropriate backups of their own important business information.</li>
+                    <li>Avoid providing confidential information belonging to third parties without appropriate authorization.</li>
                 </ul>
 
                 <p>
@@ -705,14 +626,9 @@
             </section>
 
 
-            <!-- 8 -->
-
             <section class="legal-section">
 
-                <h2>
-                    <span class="section-number">08</span>
-                    Intellectual Property Rights
-                </h2>
+                <h2><span class="section-number">08</span> Intellectual Property Rights</h2>
 
                 <p>
                     All intellectual property rights in the Company's
@@ -722,23 +638,14 @@
                     the Company or their respective lawful owners.
                 </p>
 
-                <p>
-                    Unless expressly authorized in writing,
-                    users shall not:
-                </p>
+                <p>Unless expressly authorized in writing, users shall not:</p>
 
                 <ul>
-
                     <li>Reproduce or distribute Company materials.</li>
-
                     <li>Modify or commercially exploit proprietary content.</li>
-
                     <li>Reverse engineer proprietary software.</li>
-
                     <li>Use Company trademarks without permission.</li>
-
                     <li>Remove copyright or ownership notices.</li>
-
                 </ul>
 
                 <p>
@@ -758,14 +665,9 @@
             </section>
 
 
-            <!-- 9 -->
-
             <section class="legal-section">
 
-                <h2>
-                    <span class="section-number">09</span>
-                    Confidentiality
-                </h2>
+                <h2><span class="section-number">09</span> Confidentiality</h2>
 
                 <p>
                     During a business engagement, either party
@@ -781,37 +683,14 @@
                     business engagement.
                 </p>
 
-                <p>
-                    Confidentiality obligations shall not apply
-                    to information that:
-                </p>
+                <p>Confidentiality obligations shall not apply to information that:</p>
 
                 <ul>
-
-                    <li>
-                        Is publicly available without breach of
-                        a confidentiality obligation.
-                    </li>
-
-                    <li>
-                        Was lawfully known before disclosure.
-                    </li>
-
-                    <li>
-                        Is independently developed without using
-                        confidential information.
-                    </li>
-
-                    <li>
-                        Is lawfully received from an authorized
-                        third party.
-                    </li>
-
-                    <li>
-                        Must be disclosed under applicable law
-                        or a valid order of a competent authority.
-                    </li>
-
+                    <li>Is publicly available without breach of a confidentiality obligation.</li>
+                    <li>Was lawfully known before disclosure.</li>
+                    <li>Is independently developed without using confidential information.</li>
+                    <li>Is lawfully received from an authorized third party.</li>
+                    <li>Must be disclosed under applicable law or a valid order of a competent authority.</li>
                 </ul>
 
                 <p>
@@ -824,14 +703,9 @@
             </section>
 
 
-            <!-- 10 -->
-
             <section class="legal-section">
 
-                <h2>
-                    <span class="section-number">10</span>
-                    Data Protection and Privacy
-                </h2>
+                <h2><span class="section-number">10</span> Data Protection and Privacy</h2>
 
                 <p>
                     The Company respects the privacy of website
@@ -881,14 +755,9 @@
             </section>
 
 
-            <!-- 11 -->
-
             <section class="legal-section">
 
-                <h2>
-                    <span class="section-number">11</span>
-                    Third-Party Services and Technologies
-                </h2>
+                <h2><span class="section-number">11</span> Third-Party Services and Technologies</h2>
 
                 <p>
                     Certain Company services may involve
@@ -928,14 +797,9 @@
             </section>
 
 
-            <!-- 12 -->
-
             <section class="legal-section">
 
-                <h2>
-                    <span class="section-number">12</span>
-                    Technology, Software and Service Availability
-                </h2>
+                <h2><span class="section-number">12</span> Technology, Software and Service Availability</h2>
 
                 <p>
                     The Company makes reasonable efforts to
@@ -970,14 +834,9 @@
             </section>
 
 
-            <!-- 13 -->
-
             <section class="legal-section">
 
-                <h2>
-                    <span class="section-number">13</span>
-                    Disclaimers and Professional Limitations
-                </h2>
+                <h2><span class="section-number">13</span> Disclaimers and Professional Limitations</h2>
 
                 <p>
                     Website content is provided for general
@@ -1012,14 +871,9 @@
             </section>
 
 
-            <!-- 14 -->
-
             <section class="legal-section">
 
-                <h2>
-                    <span class="section-number">14</span>
-                    Limitation of Liability
-                </h2>
+                <h2><span class="section-number">14</span> Limitation of Liability</h2>
 
                 <p>
                     To the maximum extent permitted by
@@ -1060,20 +914,15 @@
                     legally non-excludable, or any other
                     liability that cannot lawfully be
                     excluded or restricted under Indian law.
-                    
+
                 </div>
 
             </section>
 
 
-            <!-- 15 -->
-
             <section class="legal-section">
 
-                <h2>
-                    <span class="section-number">15</span>
-                    Indemnification
-                </h2>
+                <h2><span class="section-number">15</span> Indemnification</h2>
 
                 <p>
                     To the extent permitted by applicable law,
@@ -1086,27 +935,10 @@
                 </p>
 
                 <ul>
-
-                    <li>
-                        Unlawful or unauthorized materials
-                        supplied by the client.
-                    </li>
-
-                    <li>
-                        The client's infringement of
-                        third-party intellectual property rights.
-                    </li>
-
-                    <li>
-                        Fraudulent or unlawful activities
-                        conducted by the client.
-                    </li>
-
-                    <li>
-                        Material breach of the client's
-                        contractual obligations.
-                    </li>
-
+                    <li>Unlawful or unauthorized materials supplied by the client.</li>
+                    <li>The client's infringement of third-party intellectual property rights.</li>
+                    <li>Fraudulent or unlawful activities conducted by the client.</li>
+                    <li>Material breach of the client's contractual obligations.</li>
                 </ul>
 
                 <p>
@@ -1119,14 +951,9 @@
             </section>
 
 
-            <!-- 16 -->
-
             <section class="legal-section">
 
-                <h2>
-                    <span class="section-number">16</span>
-                    Force Majeure
-                </h2>
+                <h2><span class="section-number">16</span> Force Majeure</h2>
 
                 <p>
                     Neither party shall be considered in
@@ -1137,26 +964,16 @@
                     control.
                 </p>
 
-                <p>
-                    Such circumstances may include:
-                </p>
+                <p>Such circumstances may include:</p>
 
                 <ul>
-
                     <li>Natural disasters and severe weather events.</li>
-
                     <li>War, terrorism and civil disturbances.</li>
-
                     <li>Government restrictions or regulatory actions.</li>
-
                     <li>Major internet or telecommunications failures.</li>
-
                     <li>Widespread cyber incidents.</li>
-
                     <li>Power outages and infrastructure disruptions.</li>
-
                     <li>Other events beyond reasonable control.</li>
-
                 </ul>
 
                 <p>
@@ -1168,14 +985,9 @@
             </section>
 
 
-            <!-- 17 -->
-
             <section class="legal-section">
 
-                <h2>
-                    <span class="section-number">17</span>
-                    Suspension and Termination of Access
-                </h2>
+                <h2><span class="section-number">17</span> Suspension and Termination of Access</h2>
 
                 <p>
                     The Company may suspend or restrict access
@@ -1184,17 +996,11 @@
                 </p>
 
                 <ul>
-
                     <li>Security threats or unauthorized access.</li>
-
                     <li>Suspected fraudulent or unlawful activity.</li>
-
                     <li>Material breach of applicable Terms.</li>
-
                     <li>Legal or regulatory requirements.</li>
-
                     <li>Non-payment of amounts lawfully due.</li>
-
                 </ul>
 
                 <p>
@@ -1208,14 +1014,9 @@
             </section>
 
 
-            <!-- 18 -->
-
             <section class="legal-section">
 
-                <h2>
-                    <span class="section-number">18</span>
-                    Electronic Communications
-                </h2>
+                <h2><span class="section-number">18</span> Electronic Communications</h2>
 
                 <p>
                     The Company may communicate with clients
@@ -1240,14 +1041,9 @@
             </section>
 
 
-            <!-- 19 -->
-
             <section class="legal-section">
 
-                <h2>
-                    <span class="section-number">19</span>
-                    Consumer Rights and Applicable Laws
-                </h2>
+                <h2><span class="section-number">19</span> Consumer Rights and Applicable Laws</h2>
 
                 <p>
                     These Terms shall be interpreted
@@ -1274,14 +1070,9 @@
             </section>
 
 
-            <!-- 20 -->
-
             <section class="legal-section">
 
-                <h2>
-                    <span class="section-number">20</span>
-                    Dispute Resolution and Arbitration
-                </h2>
+                <h2><span class="section-number">20</span> Dispute Resolution and Arbitration</h2>
 
                 <p>
                     The parties shall first attempt to
@@ -1317,14 +1108,9 @@
             </section>
 
 
-            <!-- 21 -->
-
             <section class="legal-section">
 
-                <h2>
-                    <span class="section-number">21</span>
-                    Governing Law and Jurisdiction
-                </h2>
+                <h2><span class="section-number">21</span> Governing Law and Jurisdiction</h2>
 
                 <p>
                     These Terms and Conditions shall
@@ -1351,14 +1137,9 @@
             </section>
 
 
-            <!-- 22 -->
-
             <section class="legal-section">
 
-                <h2>
-                    <span class="section-number">22</span>
-                    Severability
-                </h2>
+                <h2><span class="section-number">22</span> Severability</h2>
 
                 <p>
                     If any provision of these Terms
@@ -1379,14 +1160,9 @@
             </section>
 
 
-            <!-- 23 -->
-
             <section class="legal-section">
 
-                <h2>
-                    <span class="section-number">23</span>
-                    Amendments and Updates
-                </h2>
+                <h2><span class="section-number">23</span> Amendments and Updates</h2>
 
                 <p>
                     The Company reserves the right
@@ -1413,14 +1189,9 @@
             </section>
 
 
-            <!-- 24 -->
-
             <section class="legal-section">
 
-                <h2>
-                    <span class="section-number">24</span>
-                    Entire Agreement
-                </h2>
+                <h2><span class="section-number">24</span> Entire Agreement</h2>
 
                 <p>
                     These Terms, together with the
@@ -1443,14 +1214,9 @@
             </section>
 
 
-            <!-- 25 -->
-
             <section class="legal-section">
 
-                <h2>
-                    <span class="section-number">25</span>
-                    Contact Information
-                </h2>
+                <h2><span class="section-number">25</span> Contact Information</h2>
 
                 <p>
                     For questions, clarification
@@ -1470,8 +1236,8 @@
 
                     <p>
                         Email:
-                        <a href="mailto:support@assureinfo.com">
-                            support@assureinfo.com
+                        <a href="mailto:support@assureinfo.in">
+                            support@assureinfo.in
                         </a>
                     </p>
 
@@ -1485,9 +1251,7 @@
                     <p>
                         Registered / Business Address:
                         <br>
-                        No. 104, Srivani Symphony Apartment,
-                        Thirupalya, Bommasandra Industrial Estate,
-                        Bangalore South, Bangalore,
+                        No. 104, Srivani Symphony, Bommasandra Industrial Estate, Bangalore,
                         Karnataka – 560099.
                     </p>
 
